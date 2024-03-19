@@ -12,6 +12,9 @@ export const categoryType = defineType({
     defineField({
       name: 'slug',
       type: 'slug',
+      options: {
+        source: 'name',
+      },
     }),
   ],
 })

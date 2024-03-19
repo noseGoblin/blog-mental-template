@@ -14,6 +14,9 @@ export const blogType = defineType({
       name: 'slug',
       type: 'slug',
       title: 'Slug of your article',
+      options: {
+        source: 'title',
+      },
     }),
     defineField({
       name: 'date',
