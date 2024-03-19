@@ -22,7 +22,8 @@ export const authorType = defineType({
     }),
     defineField({
       name: 'bio',
-      type: 'text',
+      type: 'array',
+      of: [{type: 'block'}],
     }),
     defineField({
       name: 'email',
@@ -30,7 +31,7 @@ export const authorType = defineType({
     }),
     defineField({
       name: 'linkedin',
-      type: 'string',
+      type: 'url',
     }),
     defineField({
       name: 'twitter',
