@@ -8,10 +8,12 @@ export const blogType = defineType({
     defineField({
       name: 'title',
       type: 'string',
+      title: 'Title of your article',
     }),
     defineField({
       name: 'slug',
       type: 'slug',
+      title: 'Slug of your article',
     }),
     defineField({
       name: 'date',
@@ -32,6 +34,11 @@ export const blogType = defineType({
       of: [{type: 'block'}],
     }),
     defineField({
+      name: 'categories',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'category'}]}],
+    }),
+    defineField({
       name: 'tags',
       type: 'array',
       of: [{type: 'string'}],
@@ -42,13 +49,9 @@ export const blogType = defineType({
       of: [{type: 'reference', to: [{type: 'blog'}]}],
     }),
     defineField({
-      name: 'categories',
-      type: 'array',
-      of: [{type: 'reference', to: [{type: 'category'}]}],
-    }),
-    defineField({
       name: 'excerpt',
       type: 'text',
+      title: 'Small description / excerpt of your article',
     }),
   ],
 })
