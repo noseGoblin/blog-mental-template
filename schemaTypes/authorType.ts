@@ -10,6 +10,11 @@ export const authorType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'credentials',
+      type: 'string',
+      title: 'Author credentials ( position / title / leadership: former roles / etc. )',
+    }),
+    defineField({
       name: 'slug',
       type: 'slug',
       options: {
