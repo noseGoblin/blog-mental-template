@@ -1,6 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# blog.alliantgroup.com
+[logo]: https://www.alliantgroup.com/wp-content/uploads/2017/05/alliantgroup.jpeg "alliantgroup Blog | Tax & Business Consulting | ERC | R&D | 179D"
+### Version `2024.03.20` ![alt text][logo]
 
-## Getting Started
+This is a [Next.js](https://nextjs.org/) project running [Sanity.io](https://www.sanity.io/) (clean full customized content studio) utilizing [GROQ](https://www.sanity.io/docs/groq) query language. GROQ Cheat Sheet can be found [here](https://www.sanity.io/docs/query-cheat-sheet), and a GROQ playground is [here](https://groq.dev/).
+
+## Getting Started (Next.js)
 
 First, run the development server:
 
@@ -28,6 +32,31 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+# Sanity Clean Content Studio
+Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+
+Now you can do the following things:
+
+- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
+- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
+- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+
+## Getting Started (Sanity)
+
+First, run the development server by navigating to the `/sanity` directory and running the following command:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3333](http://localhost:3333) with your browser to access the Sanity Studio development environment.
 
 ## Deploy on Vercel
 
