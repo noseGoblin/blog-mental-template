@@ -3,6 +3,7 @@
   * Add **Button** component
   * Add Blue theme to global styles
   * Add **ThemeProvider** component
+    * Wrap root layout with **ThemeProvider**
 * Install next-themes: `npm install next-themes`
   * Add **ThemeToggle** component
 
