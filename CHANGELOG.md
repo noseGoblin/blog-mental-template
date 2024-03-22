@@ -1,3 +1,16 @@
+# 2024.03.22
+* Install [shadcn-ui@0.8.0](https://ui.shadcn.com/)
+  * Add **Button** component
+  * Add Blue theme to global styles
+  * Add **ThemeProvider** component
+    * Wrap root layout with **ThemeProvider**
+  * Add **DropdownMenu** component
+  * Add **ModeToggle** component
+    * Light/Dark mode toggle
+* Install next-themes: `npm install next-themes`
+  * Add **ThemeToggle** component
+* Move Nav to root layout
+
 # 2024.03.20.01
 * Move styles to `/styles` directory
 * Install sass: `npm install sass`
