@@ -1,3 +1,4 @@
+import { simpleBlogCard } from './lib/interface';
 import { client } from './lib/sanity';
 
 async function getData() {
@@ -16,7 +17,7 @@ async function getData() {
 }
 
 export default async function Home() {
-  const data = await getData();
+  const data: simpleBlogCard = await getData();
 
   console.log(data);
   return (
