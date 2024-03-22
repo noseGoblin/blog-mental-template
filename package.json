@@ -1,6 +1,6 @@
 {
   "name": "blog.sanity",
-  "version": "2024.03.22",
+  "version": "2024.03.22.01",
   "private": true,
   "scripts": {
     "dev": "next dev",
