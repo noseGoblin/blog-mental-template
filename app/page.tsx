@@ -17,7 +17,7 @@ async function getData() {
 }
 
 export default async function Home() {
-  const data: simpleBlogCard = await getData();
+  const data: simpleBlogCard[] = await getData();
 
   console.log(data);
   return (
