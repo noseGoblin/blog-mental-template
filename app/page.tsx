@@ -1,3 +1,4 @@
+import { Card } from '@/components/ui/card';
 import { simpleBlogCard } from './lib/interface';
 import { client } from './lib/sanity';
 
@@ -25,9 +26,8 @@ export default async function Home() {
     <div className='w-full h-screen py-5'>
       <div className='grid grid-cols-1 lg:grid-cols-4 mt-5'>
         {data.map((post) => (
-          
+          <Card key={post.currentSlug} data={post} />
         ))}
-        
       </div>
     </div>
   );
