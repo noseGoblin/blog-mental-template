@@ -5,6 +5,9 @@
 * Add interface for query types
 * Install Sanity image-url package `npm i @sanity/image-url`
   * Add image-url helper function: `imageUrlBuilder`
+* Add Sanity domain to next config
+* Add Card component from shadcn/ui: `npx shadcn-ui@latest add card`
+* Adjust container responsive grid
 
 # 2024.03.22
 * Install [shadcn-ui@0.8.0](https://ui.shadcn.com/)

@@ -5,4 +5,5 @@ export interface simpleBlogCard {
   currentCat: string[];
   date: string;
   image: any;
+  excerpt: string;
 }
