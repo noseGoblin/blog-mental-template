@@ -1,4 +1,4 @@
-# 2024.03.22.##
+# 2024.03.22.01
 * Add next-sanity package `npm i next-sanity`
 * Add Blog list query to index page
 * Add Sanity client
