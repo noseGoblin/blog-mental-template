@@ -1,4 +1,13 @@
-import Image from 'next/image';
+async function getData() {
+  const query = `
+  *[_type == 'blog'] | order(date desc) {
+    title,
+    author,
+    'currentSlug': slug.current,
+    'currentCat': categories[],
+    date,
+  }`;
+}
 
 export default function Home() {
   return (
