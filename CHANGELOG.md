@@ -1,5 +1,9 @@
 # 2024.03.##
 * Install [shadcn-ui@0.8.0](https://ui.shadcn.com/)
+  * Add **Button** component
+  * Add Blue theme to global styles
+* Install next-themes: `npm install next-themes`
+  * Add **ThemeToggle** component
 
 # 2024.03.20.01
 * Move styles to `/styles` directory
