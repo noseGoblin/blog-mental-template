@@ -4,6 +4,9 @@
   * Add Blue theme to global styles
   * Add **ThemeProvider** component
     * Wrap root layout with **ThemeProvider**
+  * Add **DropdownMenu** component
+  * Add **ModeToggle** component
+    * Light/Dark mode toggle
 * Install next-themes: `npm install next-themes`
   * Add **ThemeToggle** component
 
