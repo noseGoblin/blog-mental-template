@@ -1,4 +1,4 @@
-# 2024.03.##
+# 2024.03.22
 * Install [shadcn-ui@0.8.0](https://ui.shadcn.com/)
   * Add **Button** component
   * Add Blue theme to global styles
