@@ -9,6 +9,7 @@
     * Light/Dark mode toggle
 * Install next-themes: `npm install next-themes`
   * Add **ThemeToggle** component
+* Move Nav to root layout
 
 # 2024.03.20.01
 * Move styles to `/styles` directory
