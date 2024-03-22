@@ -9,6 +9,7 @@ async function getData() {
     'currentSlug': slug.current,
     'currentCat': categories[],
     date,
+    image,
   }`;
 
   const data = await client.fetch(query);
@@ -22,7 +23,12 @@ export default async function Home() {
   console.log(data);
   return (
     <div className='w-full h-screen py-5'>
-      <h1>New alliangroup Blog</h1>
+      <div className='grid grid-cols-1 lg:grid-cols-4 mt-5'>
+        {data.map((post) => (
+          
+        ))}
+        
+      </div>
     </div>
   );
 }
