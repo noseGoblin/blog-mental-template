@@ -1,10 +1,8 @@
-import Image from "next/image";
-import Navbar from './components/Navbar';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className='p-4'>
-      <Navbar />
+    <div className='w-full h-screen py-5'>
       <h1>New alliangroup Blog</h1>
     </div>
   );
