@@ -1,5 +1,5 @@
 # 2024.03.##
-* Install shadcn-ui@0.8.0
+* Install [shadcn-ui@0.8.0](https://ui.shadcn.com/)
 
 # 2024.03.20.01
 * Move styles to `/styles` directory
