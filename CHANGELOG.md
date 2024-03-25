@@ -6,6 +6,7 @@
   * Add `body` schema type
     * Includes style options, quote, and image
 * Add PortableText package via: `npm i @portabletext/react`
+* Add Tailwind CSS Typography plugin via: `npm install -D @tailwindcss/typography`
 
 
 # 2024.03.22.01
