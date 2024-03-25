@@ -1,9 +1,11 @@
 # 2024.03.2#
 * Add dynamic routing for blog posts
+  * Add interface for blog post query
 * Update Sanity schema types
   * Add `body` schema type
     * Includes style options, quote, and image
-* 
+* Add PortableText package via: `npm i @portabletext/react`
+
 
 # 2024.03.22.01
 * Add next-sanity package `npm i next-sanity`
