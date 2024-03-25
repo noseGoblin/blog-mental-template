@@ -1,5 +1,9 @@
 # 2024.03.2#
 * Add dynamic routing for blog posts
+* Update Sanity schema types
+  * Add `body` schema type
+    * Includes style options, quote, and image
+* 
 
 # 2024.03.22.01
 * Add next-sanity package `npm i next-sanity`
