@@ -24,7 +24,6 @@ export default async function NewsArticle({
   params: { slug: string };
 }) {
   const data: fullArticle = await getData(params.slug);
-  console.log(data);
 
   return (
     <div>
@@ -47,7 +46,7 @@ export default async function NewsArticle({
         className='rounded-lg h-[400px] border mt-8 object-cover mx-auto'
       />
 
-      <div className='mt-16'>
+      <div className='mt-16 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary'>
         <PortableText value={data.body} />
       </div>
     </div>
