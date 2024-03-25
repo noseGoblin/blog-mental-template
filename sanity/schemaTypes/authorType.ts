@@ -24,6 +24,16 @@ export const authorType = defineType({
     defineField({
       name: 'headshot',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alt Text',
+        },
+      ],
     }),
     defineField({
       name: 'bio',

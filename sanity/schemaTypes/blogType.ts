@@ -1,8 +1,8 @@
 import {defineField, defineType} from 'sanity'
 
 export const blogType = defineType({
-  name: 'blog',
-  title: 'Blog',
+  name: 'news',
+  title: 'Article',
   type: 'document',
   fields: [
     defineField({
@@ -30,11 +30,21 @@ export const blogType = defineType({
     defineField({
       name: 'image',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alt Text',
+        },
+      ],
     }),
     defineField({
       name: 'body',
-      type: 'array',
-      of: [{type: 'block'}],
+      title: 'Body Content',
+      type: 'body',
     }),
     defineField({
       name: 'categories',
@@ -49,7 +59,7 @@ export const blogType = defineType({
     defineField({
       name: 'relatedPosts',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'blog'}]}],
+      of: [{type: 'reference', to: [{type: 'news'}]}],
     }),
     defineField({
       name: 'excerpt',
