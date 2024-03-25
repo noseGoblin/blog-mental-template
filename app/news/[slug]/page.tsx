@@ -1,5 +1,6 @@
 import { fullArticle } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
+import { PortableText } from 'next-sanity';
 import Image from 'next/image';
 
 async function getData(slug: string) {
@@ -45,6 +46,10 @@ export default async function NewsArticle({
         priority
         className='rounded-lg h-[400px] border mt-8 object-cover mx-auto'
       />
+
+      <div className='mt-16'>
+        <PortableText value={data.body} />
+      </div>
     </div>
   );
 }
