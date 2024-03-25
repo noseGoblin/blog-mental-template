@@ -31,7 +31,7 @@ export default async function NewsArticle({
         <span className='block text-base text-center text-primary font-semibold tracking-wide uppercase'>
           alliantgroup - News
         </span>
-        <span className='mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl mt-8'>
+        <span className='block text-3xl text-center font-bold tracking-tight leading-8 sm:text-4xl mt-8'>
           {data.title}
         </span>
       </h1>
