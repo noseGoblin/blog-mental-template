@@ -1,3 +1,8 @@
+# 2024.03.26
+* Add Vercel ignore file
+* Deploy to Vercel
+* Deploy Sanity Studio to Sanity.io
+
 # 2024.03.25
 * Add dynamic routing for blog posts
   * Add interface for blog post query
