@@ -1,3 +1,6 @@
+# 2024.03.26.01
+* Add ISR to blog post pages and home page
+
 # 2024.03.26
 * Add Vercel ignore file
 * Deploy to Vercel
