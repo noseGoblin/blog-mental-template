@@ -1,3 +1,11 @@
+# 2024.04.08
+* Add environment variables
+  * Vercel deployed domain: [blog.alliantgroup.com](https://blog.alliantgroup.com/)
+  * Sanity Project ID
+* Add date formating to blogType
+* Add author and publish date to blog post page
+* Change Author title to Expert Author on Sanity Studio
+
 # 2024.03.26.01
 * Add ISR to blog post pages and home page
 

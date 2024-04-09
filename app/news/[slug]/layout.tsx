@@ -5,7 +5,7 @@ export default function NewsLayout({
 }) {
   return (
     <section>
-      <div className='max-w-3xl mx-auto'>{children}</div>
+      <div className='max-w-3xl mx-auto mb-20'>{children}</div>
     </section>
   );
 }
