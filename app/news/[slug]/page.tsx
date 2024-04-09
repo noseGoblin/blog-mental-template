@@ -2,6 +2,7 @@ import { fullArticle } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
 import { PortableText } from 'next-sanity';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const revalidate = 30; // revalidate every 30 seconds
 
@@ -14,14 +15,16 @@ async function getData(slug: string) {
       body,
       date,
       'currentCat': categories[0],
-      // 'authorName': author->name,
-      author->{
-        name,
-        // headshot,
-      }
+      'authorName': author->name,
+      // 'authorLink': author->slug.current,
+      // author->{
+      //   name,
+      //   // headshot,
+      // }
   }[0]`;
 
   const data = await client.fetch(query);
+  console.log(data);
   return data;
 }
 
@@ -55,8 +58,13 @@ export default async function NewsArticle({
       />
 
       <div className='mt-1 text-right'>
-        <span className='font-italic text-sm'>
-          By {data.author.name}
+        <span className=' text-sm'>
+          By{' '}
+          <span className='font-bold'>
+            {/* <Link href={`/author/${data.authorLink}`}> */}
+            {data.authorName}
+            {/* </Link> */}
+          </span>
           {' - '}
           {newDate}
         </span>
