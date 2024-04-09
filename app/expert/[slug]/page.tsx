@@ -69,10 +69,84 @@ export default async function ExpertAuthor({
           <div className='mt-4 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary'>
             <PortableText value={data.body} />
           </div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          {data.linkedin ||
+          data.twitter ||
+          data.facebook ||
+          data.instagram ||
+          data.website ? (
+            <div className='flex flex-col gap-2 w-full py-6'>
+              <h3 className='text-lg'>Social Presence:</h3>
+              <div className='flex flex-flow flex-wrap justify-between gap-4'>
+                {data.linkedin ? (
+                  <div>
+                    <Link
+                      className='text-primary font-bold text-base'
+                      target='_blank'
+                      href={data.linkedin}
+                    >
+                      LinkedIn
+                    </Link>
+                  </div>
+                ) : (
+                  ''
+                )}
+                {data.twitter ? (
+                  <div>
+                    <Link
+                      className='text-primary font-bold text-base'
+                      target='_blank'
+                      href={data.twitter}
+                    >
+                      X / Twitter
+                    </Link>
+                  </div>
+                ) : (
+                  ''
+                )}
+                {data.facebook ? (
+                  <div>
+                    <Link
+                      className='text-primary font-bold text-base'
+                      target='_blank'
+                      href={data.facebook}
+                    >
+                      Facebook
+                    </Link>
+                  </div>
+                ) : (
+                  ''
+                )}
+                {data.instagram ? (
+                  <div>
+                    <Link
+                      className='text-primary font-bold text-base'
+                      target='_blank'
+                      href={data.instagram}
+                    >
+                      Instagram
+                    </Link>
+                  </div>
+                ) : (
+                  ''
+                )}
+                {data.website ? (
+                  <div>
+                    <Link
+                      className='text-primary font-bold text-base'
+                      target='_blank'
+                      href={data.website}
+                    >
+                      Website
+                    </Link>
+                  </div>
+                ) : (
+                  ''
+                )}
+              </div>
+            </div>
+          ) : (
+            ''
+          )}
         </div>
       </div>
     </div>

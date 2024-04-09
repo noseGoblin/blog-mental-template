@@ -3,6 +3,7 @@
   * Add author page
   * Add author query
   * Add author page layout
+  * Add conditional social links section
 
 # 2024.04.08
 * Add environment variables
