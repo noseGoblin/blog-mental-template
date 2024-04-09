@@ -36,9 +36,14 @@ export const authorType = defineType({
       ],
     }),
     defineField({
-      name: 'bio',
+      name: 'body',
+      title: 'Author Bio',
+      type: 'body',
+    }),
+    defineField({
+      name: 'categories',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{type: 'reference', to: [{type: 'category'}]}],
     }),
     defineField({
       name: 'email',
