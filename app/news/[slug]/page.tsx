@@ -13,7 +13,12 @@ async function getData(slug: string) {
       image,
       body,
       date,
-      'currentCat': categories[],
+      'currentCat': categories[0],
+      // 'authorName': author->name,
+      author->{
+        name,
+        // headshot,
+      }
   }[0]`;
 
   const data = await client.fetch(query);
@@ -26,6 +31,7 @@ export default async function NewsArticle({
   params: { slug: string };
 }) {
   const data: fullArticle = await getData(params.slug);
+  const newDate = new Date(data.date).toLocaleDateString('en-US');
 
   return (
     <div>
@@ -47,6 +53,14 @@ export default async function NewsArticle({
         priority
         className='rounded-lg h-[400px] border mt-8 object-cover mx-auto'
       />
+
+      <div className='mt-1 text-right'>
+        <span className='font-italic text-sm'>
+          By {data.author.name}
+          {' - '}
+          {newDate}
+        </span>
+      </div>
 
       <div className='mt-16 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary'>
         <PortableText value={data.body} />
