@@ -21,6 +21,10 @@ export const blogType = defineType({
     defineField({
       name: 'date',
       type: 'datetime',
+      options: {
+        dateFormat: 'MM/DD/YYYY',
+        timeFormat: 'HH:mm',
+      },
     }),
     defineField({
       name: 'author',
