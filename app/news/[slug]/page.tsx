@@ -2,6 +2,7 @@ import { fullArticle } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
 import { PortableText } from 'next-sanity';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const revalidate = 30; // revalidate every 30 seconds
 
@@ -13,10 +14,17 @@ async function getData(slug: string) {
       image,
       body,
       date,
-      'currentCat': categories[],
+      'currentCat': categories[0],
+      'authorName': author->name,
+      // 'authorLink': author->slug.current,
+      // author->{
+      //   name,
+      //   // headshot,
+      // }
   }[0]`;
 
   const data = await client.fetch(query);
+  console.log(data);
   return data;
 }
 
@@ -26,6 +34,7 @@ export default async function NewsArticle({
   params: { slug: string };
 }) {
   const data: fullArticle = await getData(params.slug);
+  const newDate = new Date(data.date).toLocaleDateString('en-US');
 
   return (
     <div>
@@ -47,6 +56,19 @@ export default async function NewsArticle({
         priority
         className='rounded-lg h-[400px] border mt-8 object-cover mx-auto'
       />
+
+      <div className='mt-1 text-right'>
+        <span className=' text-sm'>
+          By{' '}
+          <span className='font-bold'>
+            {/* <Link href={`/author/${data.authorLink}`}> */}
+            {data.authorName}
+            {/* </Link> */}
+          </span>
+          {' - '}
+          {newDate}
+        </span>
+      </div>
 
       <div className='mt-16 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary'>
         <PortableText value={data.body} />

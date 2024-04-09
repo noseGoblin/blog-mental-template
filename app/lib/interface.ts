@@ -11,6 +11,7 @@ export interface simpleNewsCard {
 export interface fullArticle {
   title: string;
   author: string;
+  authorName: string;
   currentSlug: string;
   currentCat: string[];
   date: string;
