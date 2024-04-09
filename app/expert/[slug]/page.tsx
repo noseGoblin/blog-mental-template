@@ -41,13 +41,16 @@ export default async function ExpertAuthor({
         <span className='block text-base text-center text-primary font-semibold tracking-wide uppercase'>
           alliantgroup - Experts
         </span>
+        <span className='block text-4xl text-center md:text-left font-bold tracking-tight leading-8 sm:text-5xl mt-8'>
+          {data.name}
+        </span>
       </h1>
-      <div className='flex flex-col md:flex-row gap-6 md:gap-12 my-2 md:my-6 p-6'>
+      <div className='flex flex-col md:flex-row gap-6 md:gap-12 py-4 md:py-6'>
         <div className='w-full md:w-1/3'>
           <Image
             src={urlFor(data.headshot).url()}
-            width={300}
-            height={300}
+            width={200}
+            height={200}
             alt={data.headshot.alt}
             title={data.headshot.alt}
             priority
@@ -55,18 +58,15 @@ export default async function ExpertAuthor({
           />
         </div>
         <div className='w-full md:w-2/3 gap-2'>
-          <h2>
-            <span className='block text-3xl font-bold tracking-tight leading-8 sm:text-4xl mt-8'>
-              {data.name}
+          <div>
+            <span className='block text-2xl leading-8 text-center md:text-left'>
+              {data.credentials}
             </span>
-          </h2>
+          </div>
           <Button className='w-full py-6 my-6 text-lg'>
             <Link href={`mailto:${data.email}`}>Email {data.name}</Link>
           </Button>
-          <div>
-            <span className='block text-2xl leading-8'>{data.credentials}</span>
-          </div>
-          <div className='mt-6 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary'>
+          <div className='mt-4 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary'>
             <PortableText value={data.body} />
           </div>
           <div></div>
