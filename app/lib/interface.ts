@@ -33,4 +33,5 @@ export interface bioPage {
   twitter: string;
   facebook: string;
   instagram: string;
+  authoLink: string;
 }
