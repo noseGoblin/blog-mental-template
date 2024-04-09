@@ -36,7 +36,7 @@ export default async function ExpertAuthor({
   const data: bioPage = await getData(params.slug);
 
   return (
-    <div className='max-w-5xl mx-auto'>
+    <div>
       <h1>
         <span className='block text-base text-center text-primary font-semibold tracking-wide uppercase'>
           alliantgroup - Experts
@@ -76,9 +76,9 @@ export default async function ExpertAuthor({
           data.website ? (
             <div className='flex flex-col gap-2 w-full py-6'>
               <h3 className='text-lg'>Social Presence:</h3>
-              <div className='flex flex-flow flex-wrap justify-between gap-4'>
+              <div className='flex flex-flow flex-wrap justify-start gap-4'>
                 {data.linkedin ? (
-                  <div>
+                  <div className='pr-6'>
                     <Link
                       className='text-primary font-bold text-base'
                       target='_blank'
@@ -91,7 +91,7 @@ export default async function ExpertAuthor({
                   ''
                 )}
                 {data.twitter ? (
-                  <div>
+                  <div className='pr-6'>
                     <Link
                       className='text-primary font-bold text-base'
                       target='_blank'
@@ -104,7 +104,7 @@ export default async function ExpertAuthor({
                   ''
                 )}
                 {data.facebook ? (
-                  <div>
+                  <div className='pr-6'>
                     <Link
                       className='text-primary font-bold text-base'
                       target='_blank'
@@ -117,7 +117,7 @@ export default async function ExpertAuthor({
                   ''
                 )}
                 {data.instagram ? (
-                  <div>
+                  <div className='pr-6'>
                     <Link
                       className='text-primary font-bold text-base'
                       target='_blank'
@@ -130,7 +130,7 @@ export default async function ExpertAuthor({
                   ''
                 )}
                 {data.website ? (
-                  <div>
+                  <div className='pr-6'>
                     <Link
                       className='text-primary font-bold text-base'
                       target='_blank'

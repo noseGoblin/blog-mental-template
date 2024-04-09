@@ -16,7 +16,7 @@ async function getData(slug: string) {
       date,
       'currentCat': categories[0],
       'authorName': author->name,
-      // 'authorLink': author->slug.current,
+      'authorLink': author->slug.current,
       // author->{
       //   name,
       //   // headshot,
@@ -60,9 +60,7 @@ export default async function NewsArticle({
         <span className=' text-sm'>
           By{' '}
           <span className='font-bold'>
-            {/* <Link href={`/author/${data.authorLink}`}> */}
-            {data.authorName}
-            {/* </Link> */}
+            <Link href={`/expert/${data.authorLink}`}>{data.authorName}</Link>
           </span>
           {' - '}
           {newDate}

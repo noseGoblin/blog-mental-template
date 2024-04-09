@@ -1,4 +1,4 @@
-# 2024.04.##
+# 2024.04.09
 * Add /author/[slug] dynamic routing
   * Add author page
   * Add author query
