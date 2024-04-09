@@ -16,5 +16,10 @@ export const categoryType = defineType({
         source: 'name',
       },
     }),
+    defineField({
+      name: 'description',
+      type: 'array',
+      of: [{type: 'block'}],
+    }),
   ],
 })

@@ -1,3 +1,9 @@
+# 2024.04.##
+* Add /author/[slug] dynamic routing
+  * Add author page
+  * Add author query
+  * Add author page layout
+
 # 2024.04.08
 * Add environment variables
   * Vercel deployed domain: [blog.alliantgroup.com](https://blog.alliantgroup.com/)

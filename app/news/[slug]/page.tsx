@@ -24,7 +24,6 @@ async function getData(slug: string) {
   }[0]`;
 
   const data = await client.fetch(query);
-  console.log(data);
   return data;
 }
 
