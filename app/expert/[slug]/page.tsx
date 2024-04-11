@@ -22,6 +22,8 @@ async function getData(slug: string) {
       facebook,
       instagram,
       website,
+      phone,
+      location,
   }[0]`;
 
   const data = await client.fetch(query);
@@ -137,6 +139,32 @@ export default async function ExpertAuthor({
                       href={data.website}
                     >
                       Website
+                    </Link>
+                  </div>
+                ) : (
+                  ''
+                )}
+                {data.phone ? (
+                  <div className='pr-6'>
+                    <Link
+                      className='text-primary font-bold text-base'
+                      target='_blank'
+                      href={`tel:${data.phone}`}
+                    >
+                      Call {data.name} Now
+                    </Link>
+                  </div>
+                ) : (
+                  ''
+                )}
+                {data.location ? (
+                  <div className='pr-6'>
+                    <Link
+                      className='text-primary font-bold text-base'
+                      target='_blank'
+                      href={data.location}
+                    >
+                      Get Directions
                     </Link>
                   </div>
                 ) : (

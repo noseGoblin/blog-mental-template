@@ -46,6 +46,11 @@ export const blogType = defineType({
       ],
     }),
     defineField({
+      name: 'imageGallery',
+      title: 'Image Gallery',
+      type: 'imageGallery',
+    }),
+    defineField({
       name: 'body',
       title: 'Body Content',
       type: 'body',

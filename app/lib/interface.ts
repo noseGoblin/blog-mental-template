@@ -35,4 +35,6 @@ export interface bioPage {
   facebook: string;
   instagram: string;
   authoLink: string;
+  phone: string;
+  location: string;
 }
