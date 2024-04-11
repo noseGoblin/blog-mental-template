@@ -1,3 +1,10 @@
+# 2024.04.11
+* Add **ImageGallery** sanity component
+  * Add ImageGallery to blogType
+  * Add ImageGallery to **body** component
+* Add phone and location fields to author schema and author page
+  * Update interface
+
 # 2024.04.09
 * Add /author/[slug] dynamic routing
   * Add author page

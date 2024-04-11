@@ -14,6 +14,7 @@ async function getData(slug: string) {
       image,
       body,
       date,
+      imageGallery,
       'currentCat': categories[0],
       'authorName': author->name,
       'authorLink': author->slug.current,
@@ -22,8 +23,9 @@ async function getData(slug: string) {
       //   // headshot,
       // }
   }[0]`;
-
   const data = await client.fetch(query);
+
+  console.log(data.imageGallery);
   return data;
 }
 
