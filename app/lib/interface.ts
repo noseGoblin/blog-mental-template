@@ -18,6 +18,7 @@ export interface fullArticle {
   date: string;
   image: any;
   body: any;
+  imageGallery: any;
 }
 
 export interface bioPage {
@@ -35,4 +36,6 @@ export interface bioPage {
   facebook: string;
   instagram: string;
   authoLink: string;
+  phone: string;
+  location: string;
 }
