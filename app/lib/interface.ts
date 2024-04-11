@@ -18,6 +18,7 @@ export interface fullArticle {
   date: string;
   image: any;
   body: any;
+  imageGallery: any;
 }
 
 export interface bioPage {
