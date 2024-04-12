@@ -19,6 +19,7 @@ export interface fullArticle {
   image: any;
   body: any;
   imageGallery: any;
+  images: string[];
 }
 
 export interface bioPage {
