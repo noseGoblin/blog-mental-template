@@ -1,3 +1,5 @@
+// import ImageGallery from '@/app/components/ImageGallery';
+import ImageGallery from '@/app/components/ImageGallery';
 import { fullArticle } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
 import { PortableText } from 'next-sanity';
@@ -15,6 +17,7 @@ async function getData(slug: string) {
       body,
       date,
       imageGallery,
+      'images': imageGallery.images[],
       'currentCat': categories[0],
       'authorName': author->name,
       'authorLink': author->slug.current,
@@ -25,7 +28,6 @@ async function getData(slug: string) {
   }[0]`;
   const data = await client.fetch(query);
 
-  console.log(data.imageGallery);
   return data;
 }
 
@@ -72,6 +74,27 @@ export default async function NewsArticle({
       <div className='mt-16 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary'>
         <PortableText value={data.body} />
       </div>
+
+      {data.imageGallery ? (
+        // <div className='grid grid-rows-2'>
+        //   <div className='flex flex-col gap-4'>
+        //     {data.images.map((image, idx) => (
+        //       <div key={idx} className=''>
+        //         <Image
+        //           src={urlFor(image as any).url()}
+        //           alt={(image as any).alt}
+        //           width={100}
+        //           height={100}
+        //           className='border max-h-[60px] border-gray-200 rounded-sm object-cover'
+        //         />
+        //       </div>
+        //     ))}
+        //   </div>
+        // </div>
+        <div className='my-12'>
+          <ImageGallery props={data.imageGallery} />
+        </div>
+      ) : null}
     </div>
   );
 }
