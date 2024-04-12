@@ -1,6 +1,6 @@
 {
   "name": "blog.sanity",
-  "version": "2024.04.11",
+  "version": "2024.04.12",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -21,6 +21,7 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-icons": "^5.0.1",
     "sass": "^1.72.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7"

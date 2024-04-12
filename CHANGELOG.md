@@ -1,3 +1,11 @@
+# 2024.04.12
+* Install [React icons](https://www.npmjs.com/package/react-icons) via `npm i react-icons`
+* Add **ImageGallery** component
+  * Add hotspot image support
+  * Add **ImageGallery** to blog post page
+  * Update fullArticle interface
+* Update Sanity client to use environment variables
+
 # 2024.04.11
 * Add **ImageGallery** sanity component
   * Add ImageGallery to blogType
