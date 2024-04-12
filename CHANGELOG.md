@@ -1,4 +1,4 @@
-# 2024.04.## 
+# 2024.04.12
 * Install [React icons](https://www.npmjs.com/package/react-icons) via `npm i react-icons`
 * Add **ImageGallery** component
   * Add hotspot image support
