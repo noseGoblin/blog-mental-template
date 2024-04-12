@@ -91,7 +91,7 @@ export default async function NewsArticle({
         //     ))}
         //   </div>
         // </div>
-        <div>
+        <div className='my-12'>
           <ImageGallery props={data.imageGallery} />
         </div>
       ) : null}
