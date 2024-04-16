@@ -1,3 +1,6 @@
+# 2024.04.##
+# Add [Carousel](https://ui.shadcn.com/docs/components/carousel) component from shadcn/ui via: `npx shadcn-ui@latest add carousel`
+
 # 2024.04.12
 * Install [React icons](https://www.npmjs.com/package/react-icons) via `npm i react-icons`
 * Add **ImageGallery** component
