@@ -2,6 +2,7 @@
 import ImageGallery from '@/app/components/ImageGallery';
 import { fullArticle } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
+import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
@@ -26,9 +27,14 @@ async function getData(slug: string) {
       date,
       imageGallery,
       'images': imageGallery.images[],
-      'currentCat': categories[0],
+      'currentCat': categories[0]->name,
       'authorName': author->name,
       'authorLink': author->slug.current,
+      categories[]->{
+        name,
+        'catSlug': slug.current,
+        slug,
+      },
       // author->{
       //   name,
       //   // headshot,
@@ -57,6 +63,13 @@ export default async function NewsArticle({
           {data.title}
         </span>
       </h1>
+      <div className='w-full flex flex-row gap-2'>
+        {Array.from(data.categories).map((cat, index) => (
+          <a key={index} href={`/category/${cat.catSlug}`}>
+            <Badge key={index}>{cat.name}</Badge>
+          </a>
+        ))}
+      </div>
 
       <Image
         src={urlFor(data.image).url()}
@@ -84,21 +97,6 @@ export default async function NewsArticle({
       </div>
 
       {data.imageGallery ? (
-        // <div className='grid grid-rows-2'>
-        //   <div className='flex flex-col gap-4'>
-        //     {data.images.map((image, idx) => (
-        //       <div key={idx} className=''>
-        //         <Image
-        //           src={urlFor(image as any).url()}
-        //           alt={(image as any).alt}
-        //           width={100}
-        //           height={100}
-        //           className='border max-h-[60px] border-gray-200 rounded-sm object-cover'
-        //         />
-        //       </div>
-        //     ))}
-        //   </div>
-        // </div>
         <div className='my-12'>
           <ImageGallery props={data.imageGallery} />
         </div>

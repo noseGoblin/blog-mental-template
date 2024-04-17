@@ -1,9 +1,16 @@
 # 2024.04.##
 * Add [Carousel](https://ui.shadcn.com/docs/components/carousel) component from shadcn/ui via: `npx shadcn-ui@latest add carousel`
-  * Add Carousel to blog post page
+  * Add **Carousel** to blog post page
     * NOTES: image galleries are alternatives and will appear as duplicates on the page; this is for testing purposes only and should be removed / reconfigured based on feedback
 * Update **ImageGallery** component
   * Add hotspot image support
+* Add [Badge](https://ui.shadcn.com/docs/components/badge) component from shadcn/ui via: `npx shadcn-ui@latest add badge`
+  * Add **Badge** to blog post page
+* Add Category page
+  * Add category query
+  <!-- * Add category page layout -->
+  * Add category page to dynamic routing
+  * Add interface fullCategory for category query
 
 # 2024.04.12
 * Install [React icons](https://www.npmjs.com/package/react-icons) via `npm i react-icons`
