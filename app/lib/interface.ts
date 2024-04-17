@@ -19,7 +19,8 @@ export interface fullArticle {
   image: any;
   body: any;
   imageGallery: any;
-  images: string[];
+  images: any[];
+  categories: any[];
 }
 
 export interface bioPage {
@@ -39,4 +40,11 @@ export interface bioPage {
   authoLink: string;
   phone: string;
   location: string;
+  categories: any[];
+}
+
+export interface fullCategory {
+  name: string;
+  currentSlug: string;
+  description: any;
 }
