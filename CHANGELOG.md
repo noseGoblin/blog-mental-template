@@ -1,4 +1,4 @@
-# 2024.04.##
+# 2024.04.17
 * Add [Carousel](https://ui.shadcn.com/docs/components/carousel) component from shadcn/ui via: `npx shadcn-ui@latest add carousel`
   * Add **Carousel** to blog post page
     * NOTES: image galleries are alternatives and will appear as duplicates on the page; this is for testing purposes only and should be removed / reconfigured based on feedback
