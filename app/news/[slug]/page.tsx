@@ -2,6 +2,14 @@
 import ImageGallery from '@/app/components/ImageGallery';
 import { fullArticle } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
+import { Card, CardContent } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from '@/components/ui/carousel';
 import { PortableText } from 'next-sanity';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -93,6 +101,38 @@ export default async function NewsArticle({
         // </div>
         <div className='my-12'>
           <ImageGallery props={data.imageGallery} />
+        </div>
+      ) : null}
+
+      {data.imageGallery ? (
+        <div className='my-12'>
+          <Carousel className='w-[85%] md:w-full mx-auto'>
+            <CarouselContent>
+              {Array.from(data.images).map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className=''>
+                    <Card>
+                      <CardContent className='flex items-start justify-start p-0'>
+                        <span className='content-start'>
+                          <Image
+                            src={urlFor(image).width(800).height(400).url()}
+                            alt={image.alt}
+                            width={800}
+                            height={400}
+                            className='object-cover rounded-t-lg'
+                          />
+                          {/* {index + 1} */}
+                        </span>
+                      </CardContent>
+                      <p className='w-full p-4'>{image.alt}</p>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       ) : null}
     </div>

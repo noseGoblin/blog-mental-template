@@ -33,11 +33,11 @@ export default function ImageGallery({ props }: { props: any }) {
     <div className='flex flex-col gap-4 my-5'>
       <Image
         key={image._key}
-        src={image.asset ? urlFor(image).url() : ''}
+        src={image.asset ? urlFor(image).width(800).height(400).url() : ''}
         width={800}
         height={400}
         alt={image.alt}
-        className='h-[200px] sm:h-[400px] lg:h-[600px] object-scale-down'
+        className='h-[200px] sm:h-[400px] lg:h-[600px] object-cover'
       />
       <div className='w-full flex flex-col sm:flex-row items-center justify-between gap-3'>
         <div className='text-left text-sm'>{image.alt}</div>
