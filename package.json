@@ -1,6 +1,6 @@
 {
-  "name": "blog.sanity",
-  "version": "2024.04.17",
+  "name": "blog.alliantgroup.com",
+  "version": "2024.05.07",
   "private": true,
   "scripts": {
     "dev": "next dev",

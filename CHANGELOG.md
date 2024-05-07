@@ -1,4 +1,4 @@
-# 2024.05.##
+# 2024.05.07
 * Add [Hover Card](https://ui.shadcn.com/docs/components/hover-card) component from shadcn/ui via: `npx shadcn-ui@latest add hover-card`
 * Add [Avatar](https://ui.shadcn.com/docs/components/avatar) component from shadcn/ui via: `npx shadcn-ui@latest add avatar`
   * Add **HoverCard** with **Avatar** to blog post page author byline
