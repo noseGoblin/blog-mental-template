@@ -2,6 +2,7 @@
 import ImageGallery from '@/app/components/ImageGallery';
 import { fullArticle } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -11,6 +12,12 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from '@/components/ui/carousel';
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from '@/components/ui/hover-card';
+import { CalendarDays } from 'lucide-react';
 import { PortableText } from 'next-sanity';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -30,15 +37,13 @@ async function getData(slug: string) {
       'currentCat': categories[0]->name,
       'authorName': author->name,
       'authorLink': author->slug.current,
+      'authorImage': author->headshot,
+      'authorTitle': author->credentials,
       categories[]->{
         name,
         'catSlug': slug.current,
         slug,
       },
-      // author->{
-      //   name,
-      //   // headshot,
-      // }
   }[0]`;
   const data = await client.fetch(query);
 
@@ -84,9 +89,33 @@ export default async function NewsArticle({
       <div className='mt-1 text-right'>
         <span className=' text-sm'>
           By{' '}
-          <span className='font-bold'>
-            <Link href={`/expert/${data.authorLink}`}>{data.authorName}</Link>
-          </span>
+          <HoverCard>
+            <HoverCardTrigger>
+              <span className='font-bold'>
+                <Link href={`/expert/${data.authorLink}`}>
+                  {data.authorName}
+                </Link>
+              </span>
+            </HoverCardTrigger>
+            <HoverCardContent className='w-80'>
+              <div className='flex justify-between space-x-4'>
+                <Avatar>
+                  <AvatarImage src={urlFor(data.authorImage).url()} />
+                  <AvatarFallback>VC</AvatarFallback>
+                </Avatar>
+                <div className='space-y-1'>
+                  <h4 className='text-sm font-semibold'>{data.authorName}</h4>
+                  <p className='text-sm'>{data.authorTitle}</p>
+                  <div className='flex items-center pt-2'>
+                    <CalendarDays className='mr-2 h-4 w-4 opacity-70' />{' '}
+                    <span className='text-xs text-muted-foreground'>
+                      Joined December 2018
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </HoverCardContent>
+          </HoverCard>
           {' - '}
           {newDate}
         </span>

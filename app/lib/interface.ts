@@ -21,6 +21,8 @@ export interface fullArticle {
   imageGallery: any;
   images: any[];
   categories: any[];
+  authorImage: any;
+  authorTitle: string;
 }
 
 export interface bioPage {
