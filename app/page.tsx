@@ -32,17 +32,21 @@ export default async function Home() {
       <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-5'>
         {data.map((post, idx) => (
           <Card key={idx} className=''>
-            <Image
-              src={urlFor(post.image).url()}
-              alt={post.title}
-              width={600}
-              height={400}
-              className='rounded-t-lg h-[200px] object-cover'
-            />
+            <Link href={`/news/${post.currentSlug}`}>
+              <Image
+                src={urlFor(post.image).url()}
+                alt={post.title}
+                width={600}
+                height={400}
+                className='rounded-t-lg h-[200px] object-cover'
+              />
+            </Link>
             <CardContent className=''>
-              <h3 className='font-bold text-lg line-clamp-3 mt-5'>
-                {post.title}
-              </h3>
+              <Link href={`/news/${post.currentSlug}`}>
+                <h3 className='font-bold text-lg line-clamp-3 mt-5'>
+                  {post.title}
+                </h3>
+              </Link>
               <p className='text-sm line-clamp-5 mt-3 text-gray-600 dark:text-gray-300'>
                 {post.excerpt}
               </p>
