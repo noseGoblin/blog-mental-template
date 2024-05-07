@@ -2,7 +2,6 @@
 * Add [Hover Card](https://ui.shadcn.com/docs/components/hover-card) component from shadcn/ui via: `npx shadcn-ui@latest add hover-card`
 * Add [Avatar](https://ui.shadcn.com/docs/components/avatar) component from shadcn/ui via: `npx shadcn-ui@latest add avatar`
   * Add **HoverCard** with **Avatar** to blog post page author byline
-  
 
 # 2024.04.17
 * Add [Carousel](https://ui.shadcn.com/docs/components/carousel) component from shadcn/ui via: `npx shadcn-ui@latest add carousel`
