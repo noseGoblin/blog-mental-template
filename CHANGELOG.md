@@ -1,3 +1,11 @@
+# 2024.05.07.##
+* Add post links to home **Card** component images and titles
+* Fix **ImageGallery** next / previous button styles
+* Add dependency [react-icons](https://react-icons.github.io/react-icons/) via: `npm install react-icons --save`
+* Add social icons to expert "Social Presence" section
+* Add **Tooltip** component from shadcn/ui via: `npx shadcn-ui@latest add tooltip`
+  * Add **Tooltip** to social icons
+
 # 2024.05.07
 * Add [Hover Card](https://ui.shadcn.com/docs/components/hover-card) component from shadcn/ui via: `npx shadcn-ui@latest add hover-card`
 * Add [Avatar](https://ui.shadcn.com/docs/components/avatar) component from shadcn/ui via: `npx shadcn-ui@latest add avatar`

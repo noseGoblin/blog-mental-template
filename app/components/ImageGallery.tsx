@@ -44,13 +44,13 @@ export default function ImageGallery({ props }: { props: any }) {
         <div className='flex gap-4'>
           <button
             onClick={(e) => handlePrevious(e)}
-            className='p-3 bg-zinc-900 transition border border-zinc-900 hover:border-zinc-800'
+            className='p-3 bg-gray-200 dark:bg-zinc-900 transition border border-gray-200 hover:border-gray-300 dark:border-zinc-900 dark:hover:border-zinc-800'
           >
             <FiChevronLeft />
           </button>
           <button
             onClick={(e) => handleNext(e)}
-            className='p-3 bg-zinc-900 transition border border-zinc-900 hover:border-zinc-800'
+            className='p-3 bg-gray-200 dark:bg-zinc-900 transition border border-gray-200 hover:border-gray-300 dark:border-zinc-900 dark:hover:border-zinc-800'
           >
             <FiChevronRight />
           </button>

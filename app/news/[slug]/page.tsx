@@ -68,11 +68,9 @@ export default async function NewsArticle({
           {data.title}
         </span>
       </h1>
-      <div className='w-full flex flex-row gap-2'>
+      <div className='w-full flex flex-row gap-2 mt-6'>
         {Array.from(data.categories).map((cat, index) => (
-          // <a key={index} href={`/category/${cat.catSlug}`}>
           <Badge key={index}>{cat.name}</Badge>
-          // </a>
         ))}
       </div>
 
