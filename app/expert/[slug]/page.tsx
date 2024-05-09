@@ -1,9 +1,24 @@
 import { bioPage } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
 import { Button } from '@/components/ui/button';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import { PortableText } from 'next-sanity';
 import Image from 'next/image';
 import Link from 'next/link';
+
+// Icons
+import { FaLinkedin } from 'react-icons/fa';
+import { FaMapLocationDot } from 'react-icons/fa6';
+import { MdPhoneIphone } from 'react-icons/md';
+import { FaSquareXTwitter } from 'react-icons/fa6';
+import { FaInstagram } from 'react-icons/fa';
+import { IoLogoFacebook } from 'react-icons/io';
+import { TbWorldWww } from 'react-icons/tb';
 
 export const revalidate = 30; // revalidate every 30 seconds
 
@@ -36,6 +51,10 @@ export default async function ExpertAuthor({
   params: { slug: string };
 }) {
   const data: bioPage = await getData(params.slug);
+
+  const socialIcon = 'inline-block h-[1.2rem] w-[1.2rem]';
+  const socialLinks =
+    'flex items-center text-primary font-bold text-base gap-2';
 
   return (
     <div>
@@ -82,11 +101,19 @@ export default async function ExpertAuthor({
                 {data.linkedin ? (
                   <div className='pr-6'>
                     <Link
-                      className='text-primary font-bold text-base'
+                      className={socialLinks}
                       target='_blank'
                       href={data.linkedin}
                     >
-                      LinkedIn
+                      <FaLinkedin className={socialIcon} />
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger>LinkedIn</TooltipTrigger>
+                          <TooltipContent>
+                            <p>Let&apos;s connect</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     </Link>
                   </div>
                 ) : (
@@ -95,11 +122,19 @@ export default async function ExpertAuthor({
                 {data.twitter ? (
                   <div className='pr-6'>
                     <Link
-                      className='text-primary font-bold text-base'
+                      className={socialLinks}
                       target='_blank'
                       href={data.twitter}
                     >
-                      X / Twitter
+                      <FaSquareXTwitter className={socialIcon} />
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger>Twitter</TooltipTrigger>
+                          <TooltipContent>
+                            <p>Come @ me</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     </Link>
                   </div>
                 ) : (
@@ -108,11 +143,19 @@ export default async function ExpertAuthor({
                 {data.facebook ? (
                   <div className='pr-6'>
                     <Link
-                      className='text-primary font-bold text-base'
+                      className={socialLinks}
                       target='_blank'
                       href={data.facebook}
                     >
-                      Facebook
+                      <IoLogoFacebook className={socialIcon} />
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger>Facebook</TooltipTrigger>
+                          <TooltipContent>
+                            <p>Can&apos;t we be friends</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     </Link>
                   </div>
                 ) : (
@@ -121,11 +164,19 @@ export default async function ExpertAuthor({
                 {data.instagram ? (
                   <div className='pr-6'>
                     <Link
-                      className='text-primary font-bold text-base'
+                      className={socialLinks}
                       target='_blank'
                       href={data.instagram}
                     >
-                      Instagram
+                      <FaInstagram className={socialIcon} />
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger>Instagram</TooltipTrigger>
+                          <TooltipContent>
+                            <p>Let&apos;s connect</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     </Link>
                   </div>
                 ) : (
@@ -134,11 +185,19 @@ export default async function ExpertAuthor({
                 {data.website ? (
                   <div className='pr-6'>
                     <Link
-                      className='text-primary font-bold text-base'
+                      className={socialLinks}
                       target='_blank'
                       href={data.website}
                     >
-                      Website
+                      <TbWorldWww className={socialIcon} />
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger>Website</TooltipTrigger>
+                          <TooltipContent>
+                            <p>Find us online</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     </Link>
                   </div>
                 ) : (
@@ -147,11 +206,19 @@ export default async function ExpertAuthor({
                 {data.phone ? (
                   <div className='pr-6'>
                     <Link
-                      className='text-primary font-bold text-base'
+                      className={socialLinks}
                       target='_blank'
                       href={`tel:${data.phone}`}
                     >
-                      Call {data.name} Now
+                      <MdPhoneIphone className={socialIcon} />
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger>Call {data.name}</TooltipTrigger>
+                          <TooltipContent>
+                            <p>Let&apos;s chat</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     </Link>
                   </div>
                 ) : (
@@ -160,11 +227,19 @@ export default async function ExpertAuthor({
                 {data.location ? (
                   <div className='pr-6'>
                     <Link
-                      className='text-primary font-bold text-base'
+                      className={socialLinks}
                       target='_blank'
                       href={data.location}
                     >
-                      Get Directions
+                      <FaMapLocationDot className={socialIcon} />
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger>Get Directions</TooltipTrigger>
+                          <TooltipContent>
+                            <p>Come visit</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     </Link>
                   </div>
                 ) : (
