@@ -1,4 +1,4 @@
-# 2024.05.07.##
+# 2024.05.09
 * Add post links to home **Card** component images and titles
 * Fix **ImageGallery** next / previous button styles
 * Add dependency [react-icons](https://react-icons.github.io/react-icons/) via: `npm install react-icons --save`
