@@ -1,4 +1,16 @@
-# 2024.05.07.##
+# 2024.05.14
+* Add [3D Hover Card](https://ui.aceternity.com/components/3d-card-effect) component from AceTernity UI
+  * Add dependencies via: `npm i framer-motion clsx tailwind-merge`
+  * Add component file
+* Add [Form](https://ui.shadcn.com/docs/components/form) component from shadcn/ui via: `npx shadcn-ui@latest add form`
+  * Add **Label** component
+  * Add **Input** component via: `npx shadcn-ui@latest add input`
+* Add [Signup Form](https://ui.aceternity.com/components/signup-form) component from AceTernity UI
+  * Add dependencies via: `npm i framer-motion clsx tailwind-merge @radix-ui/react-label @tabler/icons-react`
+  * Add **SinupForm** component
+    * ## Need to wire up form and test
+
+# 2024.05.09
 * Add post links to home **Card** component images and titles
 * Fix **ImageGallery** next / previous button styles
 * Add dependency [react-icons](https://react-icons.github.io/react-icons/) via: `npm install react-icons --save`
