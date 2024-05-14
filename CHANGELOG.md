@@ -2,7 +2,7 @@
 * Add [3D Hover Card](https://ui.aceternity.com/components/3d-card-effect) component from AceTernity UI
   * Add dependencies via: `npm i framer-motion clsx tailwind-merge`
   * Add component file
-* Add **Form** component from shadcn/ui via: `npx shadcn-ui@latest add form`
+* Add [Form](https://ui.shadcn.com/docs/components/form) component from shadcn/ui via: `npx shadcn-ui@latest add form`
   * Add **Label** component
   * Add **Input** component via: `npx shadcn-ui@latest add input`
 * Add [Signup Form](https://ui.aceternity.com/components/signup-form) component from AceTernity UI
