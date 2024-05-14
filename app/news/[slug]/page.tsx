@@ -1,4 +1,5 @@
 // import ImageGallery from '@/app/components/ImageGallery';
+import { SignupForm } from '@/app/components/SignupForm';
 import ImageGallery from '@/app/components/ImageGallery';
 import { fullArticle } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
@@ -160,6 +161,10 @@ export default async function NewsArticle({
           </Carousel>
         </div>
       ) : null}
+
+      <div className='flex flex-col py-6 mx-auto'>
+        <SignupForm />
+      </div>
     </div>
   );
 }
