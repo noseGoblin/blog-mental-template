@@ -1,4 +1,4 @@
-# 2024.05.##
+# 2024.05.14
 * Add [3D Hover Card](https://ui.aceternity.com/components/3d-card-effect) component from AceTernity UI
   * Add dependencies via: `npm i framer-motion clsx tailwind-merge`
   * Add component file
