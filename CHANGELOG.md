@@ -7,6 +7,8 @@
   * Add **Input** component via: `npx shadcn-ui@latest add input`
 * Add [Signup Form](https://ui.aceternity.com/components/signup-form) component from AceTernity UI
   * Add dependencies via: `npm i framer-motion clsx tailwind-merge @radix-ui/react-label @tabler/icons-react`
+  * Add **SinupForm** component
+    * ## Need to wire up form and test
 
 # 2024.05.09
 * Add post links to home **Card** component images and titles
