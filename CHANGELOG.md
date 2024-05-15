@@ -1,4 +1,4 @@
-# 2024.05.##
+# 2024.05.15
 * Add `buttonType` to Sanity schema types
   * Add `customButton` to authorType
     * Add conditional to Button that opens external links in a new tab

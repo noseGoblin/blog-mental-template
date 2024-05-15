@@ -1,6 +1,6 @@
 {
   "name": "blog.alliantgroup.com",
-  "version": "2024.05.14",
+  "version": "2024.05.15",
   "private": true,
   "scripts": {
     "dev": "next dev",
