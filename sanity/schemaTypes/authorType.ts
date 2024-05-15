@@ -87,5 +87,10 @@ export const authorType = defineType({
       description: 'Add Google Maps link in this format: https://goo.gl/maps/ZYsPcRS77dagkRYA8',
       type: 'url',
     }),
+    defineField({
+      name: 'customButton',
+      type: 'reference',
+      to: [{type: 'button'}],
+    }),
   ],
 })
