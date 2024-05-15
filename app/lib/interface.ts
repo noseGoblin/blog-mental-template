@@ -43,6 +43,11 @@ export interface bioPage {
   phone: string;
   location: string;
   categories: any[];
+  customButton: any;
+  buttonColor: 'blue' | 'orange' | 'green';
+  buttonLink: string;
+  buttonText: string;
+  color: 'blue' | 'orange' | 'green';
 }
 
 export interface fullCategory {
