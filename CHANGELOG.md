@@ -1,3 +1,14 @@
+# 2024.05.15
+* Add `buttonType` to Sanity schema types
+  * Add `customButton` to authorType
+    * Add conditional to Button that opens external links in a new tab
+  * Add customButton to /expert dynamic route
+  * Update bioPage interface with new fields: color, link, text
+  * Use test page: [Mark W. Everson](https://blog.alliantgroup.com/expert/mark-w-everson)
+* Update **Button** component
+  * Accept `color` prop
+    * Values: `blue`, `green`, `orange`
+
 # 2024.05.14
 * Add [3D Hover Card](https://ui.aceternity.com/components/3d-card-effect) component from AceTernity UI
   * Add dependencies via: `npm i framer-motion clsx tailwind-merge`

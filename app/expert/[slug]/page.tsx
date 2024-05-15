@@ -20,7 +20,7 @@ import { FaInstagram } from 'react-icons/fa';
 import { IoLogoFacebook } from 'react-icons/io';
 import { TbWorldWww } from 'react-icons/tb';
 
-export const revalidate = 30; // revalidate every 30 seconds
+export const revalidate = 10; // revalidate every 30 seconds
 
 async function getData(slug: string) {
   const query = `
@@ -39,6 +39,15 @@ async function getData(slug: string) {
       website,
       phone,
       location,
+      color,
+      customButton->{
+        color,
+        text,
+        link,
+      },
+      'buttonColor': customButton->color,
+      'buttonLink': customButton->link,
+      'buttonText': customButton->text,
   }[0]`;
 
   const data = await client.fetch(query);
@@ -250,6 +259,27 @@ export default async function ExpertAuthor({
           ) : (
             ''
           )}
+
+          <div className='flex flex-col w-full items-center justify-between py-4'>
+            {data.customButton &&
+            data.buttonLink.startsWith(`^(http|https)://`) ? (
+              <Button
+                color={data.buttonColor}
+                className='w-full py-6 my-6 text-lg'
+              >
+                <Link href={data.buttonLink} target='_blank'>
+                  {data.buttonText}
+                </Link>
+              </Button>
+            ) : (
+              <Button
+                color={data.buttonColor}
+                className='w-full py-6 my-6 text-lg'
+              >
+                <Link href={data.buttonLink}>{data.buttonText}</Link>
+              </Button>
+            )}
+          </div>
         </div>
       </div>
     </div>
