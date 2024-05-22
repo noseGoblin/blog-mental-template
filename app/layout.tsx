@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import '../styles/globals.scss';
 import { ThemeProvider } from './components/theme-provider';
 import Navbar from './components/Navbar';
@@ -28,6 +29,7 @@ export default function RootLayout({
           <Navbar />
           <main className='max-w-7xl mx-auto px-4'>{children}</main>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
