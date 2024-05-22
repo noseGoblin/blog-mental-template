@@ -1,3 +1,12 @@
+# 2024.05.22.01
+* Add [Vercel Web Analytics](https://vercel.com/alliantgroup/blog-alliantgroup/analytics?environment=all)
+  * Install package via: `npm i @vercel/analytics`
+  * Add **Analytics** component to root layout
+
+# 2024.05.22
+* Fix hydration typeError on expert page
+  * Add nested ternary to check for `customButton` input
+
 # 2024.05.15
 * Add `buttonType` to Sanity schema types
   * Add `customButton` to authorType
