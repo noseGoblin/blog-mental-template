@@ -23,7 +23,7 @@ import { PortableText } from 'next-sanity';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const revalidate = 30; // revalidate every 30 seconds
+export const revalidate = 600; // revalidate every 30 seconds
 
 async function getData(slug: string) {
   const query = `
