@@ -1,3 +1,7 @@
+# 2024.05.##
+* Fix hydration typeError on expert page
+  * Add nested ternary to check for `customButton` input
+
 # 2024.05.15
 * Add `buttonType` to Sanity schema types
   * Add `customButton` to authorType
