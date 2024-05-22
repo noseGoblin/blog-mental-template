@@ -1,4 +1,4 @@
-# 2024.05.22.##
+# 2024.05.22.01
 * Add [Vercel Web Analytics](https://vercel.com/alliantgroup/blog-alliantgroup/analytics?environment=all)
   * Install package via: `npm i @vercel/analytics`
   * Add **Analytics** component to root layout
