@@ -271,13 +271,15 @@ export default async function ExpertAuthor({
                   {data.buttonText}
                 </Link>
               </Button>
-            ) : (
+            ) : data.customButton ? (
               <Button
                 color={data.buttonColor}
                 className='w-full py-6 my-6 text-lg'
               >
                 <Link href={data.buttonLink}>{data.buttonText}</Link>
               </Button>
+            ) : (
+              ''
             )}
           </div>
         </div>
