@@ -1,4 +1,4 @@
-# 2024.05.22.03..
+# 2024.05.22.03
 * Add `leadership` field to blogType schema
 * Update [news page](https://blog.alliantgroup.com/news/erc-voluntary-disclosure-program)
   * Left align title
