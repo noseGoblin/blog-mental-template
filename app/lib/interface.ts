@@ -23,6 +23,7 @@ export interface fullArticle {
   categories: any[];
   authorImage: any;
   authorTitle: string;
+  leadership: any[];
 }
 
 export interface bioPage {

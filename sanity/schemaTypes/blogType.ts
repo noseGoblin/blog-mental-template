@@ -75,5 +75,10 @@ export const blogType = defineType({
       type: 'text',
       title: 'Small description / excerpt of your article',
     }),
+    defineField({
+      name: 'leadership',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'author'}]}],
+    }),
   ],
 })
