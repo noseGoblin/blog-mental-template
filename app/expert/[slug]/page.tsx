@@ -20,7 +20,7 @@ import { FaInstagram } from 'react-icons/fa';
 import { IoLogoFacebook } from 'react-icons/io';
 import { TbWorldWww } from 'react-icons/tb';
 
-export const revalidate = 10; // revalidate every 30 seconds
+export const revalidate = 600; // revalidate every 30 seconds
 
 async function getData(slug: string) {
   const query = `
