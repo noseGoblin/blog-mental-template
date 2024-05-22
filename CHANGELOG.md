@@ -1,3 +1,10 @@
+# 2024.05.22.03..
+* Add `leadership` field to blogType schema
+* Update [news page](https://blog.alliantgroup.com/news/erc-voluntary-disclosure-program)
+  * Left align title
+  * Add `leadership` section to blog post page
+  * Update `fullArticle` interface
+
 # 2024.05.22.02
 * Update ISR to 10 minutes
   * [home](https://blog.alliantgroup.com/)
