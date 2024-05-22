@@ -1,3 +1,9 @@
+# 2024.05.22.02
+* Update ISR to 10 minutes
+  * [home](https://blog.alliantgroup.com/)
+  * [expert page](https://blog.alliantgroup.com/expert/mark-w-everson)
+  * [news page](https://blog.alliantgroup.com/news/alliantgroup-and-ceo-dhaval-jadav-host-think-tank-focused-on-ai-for-small-and-medium-sized-cpa-firms-and-businesses)
+
 # 2024.05.22.01
 * Add [Vercel Web Analytics](https://vercel.com/alliantgroup/blog-alliantgroup/analytics?environment=all)
   * Install package via: `npm i @vercel/analytics`
