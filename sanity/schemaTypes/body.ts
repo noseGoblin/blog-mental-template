@@ -71,5 +71,8 @@ export default {
     {
       type: 'imageGallery',
     },
+    {
+      type: 'youTube',
+    },
   ],
 }

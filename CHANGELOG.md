@@ -1,3 +1,8 @@
+# 2024.05.##
+* Add youTube schemaType
+  * Add youTube field to body schemaType
+* Make Leadership optional on blog /news page
+
 # 2024.05.22.03
 * Add `leadership` field to blogType schema
 * Update [news page](https://blog.alliantgroup.com/news/erc-voluntary-disclosure-program)
