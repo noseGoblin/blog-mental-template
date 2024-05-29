@@ -1,4 +1,4 @@
-# 2024.05.##
+# 2024.05.29
 * Add youTube schemaType
   * Add youTube field to body schemaType
 * Add [react-player](https://www.npmjs.com/package/react-player) package, in Sanity project folder, via: `npm install react-player @sanity/ui`
