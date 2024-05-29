@@ -1,6 +1,6 @@
-// import ImageGallery from '@/app/components/ImageGallery';
 import { SignupForm } from '@/app/components/SignupForm';
 import ImageGallery from '@/app/components/ImageGallery';
+import YouTubeEmbed from '@/app/components/YouTubeEmbed';
 import { fullArticle } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -53,6 +53,8 @@ async function getData(slug: string) {
         credentials,
         body,
       },
+      youTube,
+      'youTubeUrl': youTube.url,
   }[0]`;
   const data = await client.fetch(query);
 
@@ -132,6 +134,12 @@ export default async function NewsArticle({
         <PortableText value={data.body} />
       </div>
 
+      {data.youTube ? (
+        <div className='my-12'>
+          <YouTubeEmbed url={data.youTubeUrl} />
+        </div>
+      ) : null}
+
       {data.imageGallery ? (
         <div className='my-12'>
           <ImageGallery props={data.imageGallery} />
@@ -170,49 +178,55 @@ export default async function NewsArticle({
         </div>
       ) : null}
 
-      <div className='w-full flex flex-col py-4 mx-auto'>
-        <h3 className='text-2xl font-bold pb-4'>Leadership</h3>
-        <div className='flex flex-row gap-2'>
-          {Array.from(data.leadership).map((leader, index) => (
-            <Badge key={index}>
-              <HoverCard>
-                <HoverCardTrigger>
-                  <div className='flex flex-row items-center justify-between'>
-                    <Link href={`/expert/${leader.leaderSlug}`}>
-                      <Image
-                        src={urlFor(leader.headshot).url()}
-                        alt={leader.name}
-                        width={20}
-                        height={20}
-                        className='rounded-t-lg h-[20px] object-cover inline-block pr-1'
-                      />
-                      <span className='font-bold'>{leader.name}</span>
-                    </Link>
-                  </div>
-                </HoverCardTrigger>
-                <HoverCardContent className='w-80'>
-                  <div className='flex justify-between space-x-4'>
-                    <Avatar>
-                      <AvatarImage src={urlFor(leader.headshot).url()} />
-                      <AvatarFallback>VC</AvatarFallback>
-                    </Avatar>
-                    <div className='space-y-1'>
-                      <h4 className='text-sm font-semibold'>{leader.name}</h4>
-                      <p className='text-sm'>{leader.credentials}</p>
-                      <div className='flex items-center pt-2'>
-                        <CalendarDays className='mr-2 h-4 w-4 opacity-70' />{' '}
-                        <span className='text-xs text-muted-foreground'>
-                          Joined December 2018
-                        </span>
+      {data.leadership ? (
+        <>
+          <div className='w-full flex flex-col py-4 mx-auto'>
+            <h3 className='text-2xl font-bold pb-4'>Leadership</h3>
+            <div className='flex flex-row gap-2'>
+              {Array.from(data.leadership).map((leader, index) => (
+                <Badge key={index}>
+                  <HoverCard>
+                    <HoverCardTrigger>
+                      <div className='flex flex-row items-center justify-between'>
+                        <Link href={`/expert/${leader.leaderSlug}`}>
+                          <Image
+                            src={urlFor(leader.headshot).url()}
+                            alt={leader.name}
+                            width={20}
+                            height={20}
+                            className='rounded-t-lg h-[20px] object-cover inline-block pr-1'
+                          />
+                          <span className='font-bold'>{leader.name}</span>
+                        </Link>
                       </div>
-                    </div>
-                  </div>
-                </HoverCardContent>
-              </HoverCard>
-            </Badge>
-          ))}
-        </div>
-      </div>
+                    </HoverCardTrigger>
+                    <HoverCardContent className='w-80'>
+                      <div className='flex justify-between space-x-4'>
+                        <Avatar>
+                          <AvatarImage src={urlFor(leader.headshot).url()} />
+                          <AvatarFallback>VC</AvatarFallback>
+                        </Avatar>
+                        <div className='space-y-1'>
+                          <h4 className='text-sm font-semibold'>
+                            {leader.name}
+                          </h4>
+                          <p className='text-sm'>{leader.credentials}</p>
+                          <div className='flex items-center pt-2'>
+                            <CalendarDays className='mr-2 h-4 w-4 opacity-70' />{' '}
+                            <span className='text-xs text-muted-foreground'>
+                              Joined December 2018
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </HoverCardContent>
+                  </HoverCard>
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </>
+      ) : null}
 
       <div className='flex flex-col py-6 mx-auto'>
         <SignupForm />

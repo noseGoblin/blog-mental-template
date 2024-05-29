@@ -24,6 +24,8 @@ export interface fullArticle {
   authorImage: any;
   authorTitle: string;
   leadership: any[];
+  youTube: string;
+  youTubeUrl: string;
 }
 
 export interface bioPage {
