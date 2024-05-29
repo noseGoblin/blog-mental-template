@@ -1,6 +1,11 @@
 # 2024.05.##
 * Add youTube schemaType
   * Add youTube field to body schemaType
+* Add [react-player](https://www.npmjs.com/package/react-player) package, in Sanity project folder, via: `npm install react-player @sanity/ui`
+* Add [react-player](https://www.npmjs.com/package/react-player) dependency via: `npm install react-player`
+  * Add **YouTubeEmbed** component
+  * Add conditional **YouTubeEmbed** to blog post page
+  * Add data types to `fullArticle` interface
 * Make Leadership optional on blog /news page
 
 # 2024.05.22.03

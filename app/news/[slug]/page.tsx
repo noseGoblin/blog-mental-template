@@ -1,6 +1,6 @@
-// import ImageGallery from '@/app/components/ImageGallery';
 import { SignupForm } from '@/app/components/SignupForm';
 import ImageGallery from '@/app/components/ImageGallery';
+import YouTubeEmbed from '@/app/components/YouTubeEmbed';
 import { fullArticle } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -53,6 +53,8 @@ async function getData(slug: string) {
         credentials,
         body,
       },
+      youTube,
+      'youTubeUrl': youTube.url,
   }[0]`;
   const data = await client.fetch(query);
 
@@ -131,6 +133,12 @@ export default async function NewsArticle({
       <div className='mt-16 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary'>
         <PortableText value={data.body} />
       </div>
+
+      {data.youTube ? (
+        <div className='my-12'>
+          <YouTubeEmbed url={data.youTubeUrl} />
+        </div>
+      ) : null}
 
       {data.imageGallery ? (
         <div className='my-12'>

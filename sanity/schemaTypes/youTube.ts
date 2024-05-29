@@ -1,4 +1,5 @@
 import {PlayIcon} from '@sanity/icons'
+// import {YouTubePreview} from '../../app/components/YouTubePreview'
 
 export default {
   name: 'youTube',
@@ -12,4 +13,10 @@ export default {
       type: 'url',
     },
   ],
+  preview: {
+    select: {title: 'url'},
+  },
+  // components: {
+  //   preview: YouTubePreview,
+  // },
 }
