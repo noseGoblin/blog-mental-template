@@ -51,6 +51,11 @@ export const blogType = defineType({
       type: 'imageGallery',
     }),
     defineField({
+      name: 'youTube',
+      title: 'YouTube Embed',
+      type: 'youTube',
+    }),
+    defineField({
       name: 'body',
       title: 'Body Content',
       type: 'body',
