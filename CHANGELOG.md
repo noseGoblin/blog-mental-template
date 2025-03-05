@@ -1,3 +1,25 @@
+# 2025.03.05
+* Update Next.js v15.2.1
+  * Update React and React DOM to v18.3.1 due to [Sanity compatibility requirement](https://www.sanity.io/help/react-19)
+  * Update all dependencies
+    * Add package `npm-check-updates` to monitor update all dependencies, and run
+  * Update dymanic page routes to await props for server components
+* Update Bun v1.2.4 and npm to 11.2.0
+* Update Sanity v3.78.0
+  * [Enable React SctrictMode](https://www.sanity.io/docs/cli-reference#reactStrictMode-d6dd5ed608de)
+  * Update all dependencies
+    * Add package `npm-check-updates` to monitor update all dependencies, and run
+* Update Tailwind CSS v4.0.10
+  * Update all dependencies
+    * Update next-themes and ThemeProvider
+      * Add `suppressHydrationWarning` to layout to avoid hydration warnings
+      * Update dark mode to `data-mode`
+  * Recongifure darkmode from class to selector based
+    * Use `[data-mode="dark"]` to enable dark mode
+  * Refactor files to support new tw 4
+* Migrate components to `@/components` directory
+* Update Readme branding
+
 # 2024.05.29
 * Add youTube schemaType
   * Add youTube field to body schemaType

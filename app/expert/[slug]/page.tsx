@@ -54,11 +54,10 @@ async function getData(slug: string) {
   return data;
 }
 
-export default async function ExpertAuthor({
-  params,
-}: {
-  params: { slug: string };
+export default async function ExpertAuthor(props: {
+  params: Promise<{ slug: string }>;
 }) {
+  const params = await props.params;
   const data: bioPage = await getData(params.slug);
 
   const socialIcon = 'inline-block h-[1.2rem] w-[1.2rem]';
