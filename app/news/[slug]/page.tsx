@@ -1,6 +1,6 @@
-import { SignupForm } from '@/app/components/SignupForm';
-import ImageGallery from '@/app/components/ImageGallery';
-import YouTubeEmbed from '@/app/components/YouTubeEmbed';
+import { SignupForm } from '@/components/SignupForm';
+import ImageGallery from '@/components/ImageGallery';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 import { fullArticle } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -61,11 +61,10 @@ async function getData(slug: string) {
   return data;
 }
 
-export default async function NewsArticle({
-  params,
-}: {
-  params: { slug: string };
+export default async function NewsArticle(props: {
+  params: Promise<{ slug: string }>;
 }) {
+  const params = await props.params;
   const data: fullArticle = await getData(params.slug);
   const newDate = new Date(data.date).toLocaleDateString('en-US');
 
