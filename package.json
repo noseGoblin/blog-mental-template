@@ -20,6 +20,7 @@
     "@sanity/image-url": "^1.1.0",
     "@sanity/ui": "^2.15.2",
     "@tabler/icons-react": "^3.31.0",
+    "@tailwindcss/postcss": "^4.0.10",
     "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -49,7 +50,7 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^9",
     "eslint-config-next": "^15.2.1",
-    "postcss": "^8",
+    "postcss": "^8.5.3",
     "tailwindcss": "^4.0.10",
     "typescript": "^5"
   }

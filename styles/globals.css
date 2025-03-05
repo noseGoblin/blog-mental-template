@@ -4,8 +4,6 @@
 
 @custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-
 @theme {
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
