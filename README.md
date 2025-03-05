@@ -1,6 +1,6 @@
 # blog.alliantgroup.com
-[logo]: https://www.alliantgroup.com/wp-content/uploads/2017/05/alliantgroup.jpeg "alliantgroup Blog | Tax & Business Consulting | ERC | R&D | 179D"
-### Version `2024.05.29` ![alt text][logo]
+[logo]: https://www.alliantgroup.com/wp-content/uploads/2024/10/alliant-logo_noalpha.png "alliant | Tax & Business Consulting | ERC | R&D | 179D"
+### Version `2025.03.05` ![alt text][logo]
 
 This is a [Next.js](https://nextjs.org/) project running [Sanity.io](https://www.sanity.io/) (clean full customized content studio) utilizing [GROQ](https://www.sanity.io/docs/groq) query language. GROQ Cheat Sheet can be found [here](https://www.sanity.io/docs/query-cheat-sheet), and a GROQ playground is [here](https://groq.dev/). [Shadcdn/ui](https://ui.shadcn.com/) is used for some UI components, and the (Blue) theme is toggled with next-themes.
 
