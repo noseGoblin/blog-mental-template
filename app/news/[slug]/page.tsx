@@ -61,11 +61,10 @@ async function getData(slug: string) {
   return data;
 }
 
-export default async function NewsArticle({
-  params,
-}: {
-  params: { slug: string };
+export default async function NewsArticle(props: {
+  params: Promise<{ slug: string }>;
 }) {
+  const params = await props.params;
   const data: fullArticle = await getData(params.slug);
   const newDate = new Date(data.date).toLocaleDateString('en-US');
 
