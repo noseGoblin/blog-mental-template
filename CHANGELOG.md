@@ -1,3 +1,8 @@
+# 2025.03.##
+* Update Sanity version to 2.0.0
+* Update Tailwind CSS version to 4.0.0
+* Migrate components to `@/components` directory
+
 # 2024.05.29
 * Add youTube schemaType
   * Add youTube field to body schemaType

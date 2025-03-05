@@ -2,8 +2,8 @@ import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
-import { ThemeProvider } from './components/theme-provider';
-import Navbar from './components/Navbar';
+import { ThemeProvider } from '@/components/theme-provider';
+import Navbar from '@/components/Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
