@@ -18,6 +18,7 @@
     * Use `[data-mode="dark"]` to enable dark mode
   * Refactor files to support new tw 4
 * Migrate components to `@/components` directory
+* Update Readme branding
 
 # 2024.05.29
 * Add youTube schemaType

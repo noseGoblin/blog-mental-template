@@ -1,6 +1,6 @@
 {
   "name": "blog.alliantgroup.com",
-  "version": "2024.05.29",
+  "version": "2025.03.05",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
