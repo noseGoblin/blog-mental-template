@@ -1,5 +1,7 @@
 # 2025.03.06
 * Update dark mode styles
+  * Fix ModeToggle icon color issue
+* Begin Navbar rebrand
 
 # 2025.03.05
 * Update Next.js v15.2.1
