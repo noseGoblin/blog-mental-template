@@ -78,7 +78,7 @@ export default async function NewsArticle(props: {
           {data.title}
         </span>
       </h1>
-      <div className='w-full flex flex-row gap-2 mt-6'>
+      <div className='w-full flex flex-row gap-2 mt-6 text-white'>
         {Array.from(data.categories).map((cat, index) => (
           <Badge key={index}>{cat.name}</Badge>
         ))}
@@ -181,7 +181,7 @@ export default async function NewsArticle(props: {
         <>
           <div className='w-full flex flex-col py-4 mx-auto'>
             <h3 className='text-2xl font-bold pb-4'>Leadership</h3>
-            <div className='flex flex-row gap-2'>
+            <div className='flex flex-row gap-2 text-white'>
               {Array.from(data.leadership).map((leader, index) => (
                 <Badge key={index}>
                   <HoverCard>
