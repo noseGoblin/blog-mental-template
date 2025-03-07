@@ -6,4 +6,5 @@ export default defineCliConfig({
     dataset: 'production',
   },
   reactStrictMode: true,
+  studioHost: 'blog-alliantgroup',
 })
