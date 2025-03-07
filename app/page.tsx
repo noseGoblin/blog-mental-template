@@ -31,7 +31,7 @@ export default async function Home() {
     <div className='w-full h-screen py-5'>
       <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-5'>
         {data.map((post, idx) => (
-          <Card key={idx} className=''>
+          <Card key={idx} className='bg-white dark:bg-gray-900'>
             <Link href={`/news/${post.currentSlug}`}>
               <Image
                 src={urlFor(post.image).url()}
@@ -43,14 +43,14 @@ export default async function Home() {
             </Link>
             <CardContent className=''>
               <Link href={`/news/${post.currentSlug}`}>
-                <h3 className='font-bold text-lg line-clamp-3 mt-5'>
+                <h3 className='font-bold text-lg line-clamp-3 mt-5 dark:text-gray-200'>
                   {post.title}
                 </h3>
               </Link>
-              <p className='text-sm line-clamp-5 mt-3 text-gray-600 dark:text-gray-300'>
+              <p className='text-sm line-clamp-5 mt-3 text-gray-600 dark:text-gray-400'>
                 {post.excerpt}
               </p>
-              <Button asChild className='w-full mt-7'>
+              <Button asChild className='w-full mt-7 text-white'>
                 <Link href={`/news/${post.currentSlug}`}>Read More</Link>
               </Button>
             </CardContent>
