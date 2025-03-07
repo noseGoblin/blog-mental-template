@@ -1,3 +1,8 @@
+# 2025.03.06
+* Update dark mode styles
+  * Fix ModeToggle icon color issue
+* Begin Navbar rebrand
+
 # 2025.03.05
 * Update Next.js v15.2.1
   * Update React and React DOM to v18.3.1 due to [Sanity compatibility requirement](https://www.sanity.io/help/react-19)
