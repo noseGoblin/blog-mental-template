@@ -1,5 +1,5 @@
 # 2025.03.##
-* Add typography styles to global styles
+* Add Sass styles to global styles
 
 # 2025.03.06
 * Update dark mode styles
