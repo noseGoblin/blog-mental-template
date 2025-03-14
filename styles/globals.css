@@ -251,6 +251,35 @@ p a:hover, li a:hover, span a:hover {
   text-decoration-thickness: 0.2em;
 }
 
+/* Spacing Module –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.button,
+button,
+dd,
+dt,
+li {
+  margin-bottom: 1rem;
+}
+
+fieldset,
+input,
+select,
+textarea {
+  margin-bottom: 1.5rem;
+}
+
+blockquote,
+dl,
+figure,
+form,
+ol,
+p,
+pre,
+table,
+ul {
+  margin-bottom: 2.5rem;
+}
+
 /* // * {
 //   @apply border-border;
 // }

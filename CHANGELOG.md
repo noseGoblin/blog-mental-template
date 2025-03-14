@@ -1,3 +1,6 @@
+# 2025.03.##
+* Add typography styles to global styles
+
 # 2025.03.06
 * Update dark mode styles
   * Fix ModeToggle icon color issue
