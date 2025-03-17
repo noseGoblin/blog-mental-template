@@ -1,3 +1,13 @@
+# 2025.03.##
+* Update next-themes v0.4.5
+* Add LogoSwitcher component
+  * Add LogoSwitcher to Navbar
+* Add 3D card
+  * Add CardBody, CardContainer, CardItem components
+  * Replace Card with new 3D card
+  * Style new card on home page route
+  * Add ThreeDCardDemo component
+
 # 2025.03.14
 * Add Sass styles to global styles
 
