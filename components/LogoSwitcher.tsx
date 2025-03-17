@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import React from 'react';
@@ -20,12 +22,12 @@ export function LogoSwitcher({ image, imageDark }: LogoSwitcherProps) {
   if (!mounted) {
     return (
       <Image
-        src="https://cdn.sanity.io/images/v700z5ue/production/872176b75935dcbf54bdcb8d633847a4b9d28dec-333x100.webp"
-        alt="alliant offers expert business and tax consulting solutions helping American businesses take full advantage of tax credits, incentives, and deductions."
+        src='https://cdn.sanity.io/images/v700z5ue/production/872176b75935dcbf54bdcb8d633847a4b9d28dec-333x100.webp'
+        alt='alliant offers expert business and tax consulting solutions helping American businesses take full advantage of tax credits, incentives, and deductions.'
         width={200}
         height={60}
         priority={true}
-        className="cursor-pointer self-center dark:bg-gray-400"
+        className='cursor-pointer self-center dark:bg-gray-400'
       />
     );
   }
@@ -52,7 +54,7 @@ export function LogoSwitcher({ image, imageDark }: LogoSwitcherProps) {
   return (
     <Image
       src={src}
-      alt="alliant offers expert business and tax consulting solutions helping American businesses take full advantage of tax credits, incentives, and deductions."
+      alt='alliant offers expert business and tax consulting solutions helping American businesses take full advantage of tax credits, incentives, and deductions.'
       width={200}
       height={60}
       priority={true}
