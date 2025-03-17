@@ -34,7 +34,7 @@ export default async function Home() {
       <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mt-5 items-start justify-between '>
         {data.map((post, idx) => (
           <CardContainer key={idx} className='max-w-[400px]'>
-            <CardBody className='bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border'>
+            <CardBody className='bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-full rounded-xl p-6 border flex flex-col'>
               <Link href={`/news/${post.currentSlug}`}>
                 <CardItem translateZ='100' className='w-full mt-0'>
                   <Image
@@ -71,36 +71,6 @@ export default async function Home() {
           </CardContainer>
         ))}
       </div>
-
-      {/* <ThreeDCardDemo props={data} />
-      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-5'>
-        {data.map((post, idx) => (
-          <Card key={idx} className='bg-white dark:bg-gray-900'>
-            <Link href={`/news/${post.currentSlug}`}>
-              <Image
-                src={urlFor(post.image).url()}
-                alt={post.title}
-                width={600}
-                height={400}
-                className='rounded-t-lg h-[200px] object-cover'
-              />
-            </Link>
-            <CardContent className=''>
-              <Link href={`/news/${post.currentSlug}`}>
-                <h3 className='font-bold text-lg line-clamp-3 mt-5 dark:text-gray-200'>
-                  {post.title}
-                </h3>
-              </Link>
-              <p className='text-sm line-clamp-5 mt-3 text-gray-600 dark:text-gray-400'>
-                {post.excerpt}
-              </p>
-              <Button asChild className='w-full mt-7 text-white'>
-                <Link href={`/news/${post.currentSlug}`}>Read More</Link>
-              </Button>
-            </CardContent>
-          </Card>
-        ))}
-      </div> */}
     </div>
   );
 }
