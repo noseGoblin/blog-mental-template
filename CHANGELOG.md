@@ -1,3 +1,7 @@
+# 2025.03.21.01
+* Fix typo in news page route
+  * Due to updated query
+
 # 2025.03.21
 * Add CardStack component
   * Add [Color Theif](https://www.npmjs.com/package/colorthief) v2.6.0 package via: `npm i colorthief`
