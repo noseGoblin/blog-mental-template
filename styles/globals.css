@@ -2,7 +2,7 @@
 
 @plugin 'tailwindcss-animate';
 
-@custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
+@custom-variant dark (&:where([data-mode=dark], [data-mode=dark] *));
 
 @theme {
   --color-border: hsl(var(--border));
@@ -138,24 +138,6 @@
   tab-size: 2;
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-}
-
 :root {
   --card: hsl(0 0% 100%);
   --card-foreground: hsl(222.2 84% 4.9%);
@@ -199,7 +181,8 @@
   --card-foreground: hsl(210 40% 98%);
   --popover: hsl(222.2 84% 4.9%);
   --popover-foreground: hsl(210 40% 98%);
-  --primary: hsl(217.2 91.2% 59.8%);
+  --socials: hsl(200.55deg 100% 50.2%);
+  --primary: hsl(200.55deg 100% 50.2%);
   --primary-foreground: hsl(222.2 47.4% 11.2%);
   --secondary: hsl(217.2 32.6% 17.5%);
   --secondary-foreground: hsl(210 40% 98%);
@@ -301,8 +284,6 @@ p a:hover, li a:hover, span a:hover {
 
 /* Spacing Module –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.button,
-button,
 dd,
 dt,
 li {

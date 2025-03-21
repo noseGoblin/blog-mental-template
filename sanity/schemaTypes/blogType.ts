@@ -51,6 +51,11 @@ export const blogType = defineType({
       type: 'imageGallery',
     }),
     defineField({
+      name: 'propertyCard',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'propertyCard'}]}],
+    }),
+    defineField({
       name: 'youTube',
       title: 'YouTube Embed',
       type: 'youTube',
