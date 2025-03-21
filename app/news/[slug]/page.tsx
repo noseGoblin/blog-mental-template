@@ -188,7 +188,7 @@ export default async function NewsArticle(props: {
         </div>
       ) : null}
 
-      {data.propertyCard ? (
+      {data.cards ? (
         <div className='my-12'>
           <CardStack initialCards={data.cards} />
         </div>
