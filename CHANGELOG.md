@@ -9,6 +9,7 @@
   * Update inferface fullArticle with propertyCard types
 * Update sanity cli v3.80.0
 * Update framer-motion paackage v12.5.0
+* Update @types/node dependency v22.13.11
 * Add new `socials` dark mode color
   * Update primary dark mode color
   * **Note:** *remediation need to fix dark mode colors not updating*
