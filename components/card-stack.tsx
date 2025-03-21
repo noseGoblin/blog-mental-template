@@ -191,11 +191,11 @@ export default function CardStack({ initialCards = [] }: CardStackProps) {
 }
 
 interface CardProps {
-  card: CardData
-  index: number
-  removeCard: (id: string) => void
-  getIconComponent: (iconName: string) => JSX.Element
-  totalCards: number
+  card: CardData;
+  index: number;
+  removeCard: (id: string) => void;
+  getIconComponent: (iconName: string) => React.ReactElement;
+  totalCards: number;
 }
 
 function Card({ card, index, removeCard, getIconComponent, totalCards }: CardProps) {
