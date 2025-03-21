@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ArrowUpRight, Bed, Users, DollarSign } from "lucide-react"
+
+// @ts-ignore
 import ColorThief from "colorthief"
 
 interface SanityImage {

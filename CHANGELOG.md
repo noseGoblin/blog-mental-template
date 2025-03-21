@@ -7,6 +7,7 @@
   * Add CardStack component to news page route
     * Update query to include propertyCard fields
   * Update inferface fullArticle with propertyCard types
+  * Add `@ts-ignore` to suppress TypeScript error
 * Update sanity cli v3.80.0
 * Update framer-motion paackage v12.5.0
 * Update @types/node dependency v22.13.11
