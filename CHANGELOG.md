@@ -1,3 +1,20 @@
+# 2025.03.21
+* Add CardStack component
+  * Add [Color Theif](https://www.npmjs.com/package/colorthief) v2.6.0 package via: `npm i colorthief`
+  * Add `images.unsplash.com` domain to `next.config.js` for image fallbacks
+  * Add propertyCard Sanity schema type
+  * Add propertyCard to blogType schema
+  * Add CardStack component to news page route
+    * Update query to include propertyCard fields
+  * Update inferface fullArticle with propertyCard types
+  * Add `@ts-ignore` to suppress TypeScript error
+* Update sanity cli v3.80.0
+* Update framer-motion paackage v12.5.0
+* Update @types/node dependency v22.13.11
+* Add new `socials` dark mode color
+  * Update primary dark mode color
+  * **Note:** *remediation need to fix dark mode colors not updating*
+
 # 2025.03.17
 * Update next-themes v0.4.5
 * Add LogoSwitcher component
