@@ -22,6 +22,7 @@ import { CalendarDays } from 'lucide-react';
 import { PortableText } from 'next-sanity';
 import Image from 'next/image';
 import Link from 'next/link';
+import CardStack from '@/components/card-stack';
 
 export const revalidate = 600; // revalidate every 30 seconds
 
@@ -33,6 +34,16 @@ async function getData(slug: string) {
       image,
       body,
       date,
+      'cards': propertyCard[]->{
+        _id,
+        title,
+        subtitle,
+        description,
+        mainImage,
+        'imageUrl': mainImage.asset->url,
+        'imageAlt': mainImage.alt,
+        icon,
+      },
       imageGallery,
       'images': imageGallery.images[],
       'currentCat': categories[0]->name,
@@ -176,6 +187,9 @@ export default async function NewsArticle(props: {
           </Carousel>
         </div>
       ) : null}
+      <div className='my-12'>
+        <CardStack initialCards={data.cards} />
+      </div>
 
       {data.leadership ? (
         <>

@@ -19,6 +19,10 @@ export interface fullArticle {
   image: any;
   body: any;
   imageGallery: any;
+  propertyCard: any[];
+  cards: any[];
+  imageAlt: string;
+  imageUrl: string;
   images: any[];
   categories: any[];
   authorImage: any;

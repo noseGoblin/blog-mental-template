@@ -62,7 +62,7 @@ export default async function ExpertAuthor(props: {
 
   const socialIcon = 'inline-block h-[1.2rem] w-[1.2rem]';
   const socialLinks =
-    'flex items-center text-primary font-bold text-base gap-2';
+    'flex items-center text-primary dark:text-socials font-bold text-base gap-2';
 
   return (
     <div>
@@ -92,7 +92,7 @@ export default async function ExpertAuthor(props: {
               {data.credentials}
             </span>
           </div>
-          <Button className='w-full py-6 my-6 text-lg'>
+          <Button className='w-full py-6 my-6 text-lg text-white dark:text-white'>
             <Link href={`mailto:${data.email}`}>Email {data.name}</Link>
           </Button>
           <div className='mt-4 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary'>
@@ -105,9 +105,9 @@ export default async function ExpertAuthor(props: {
           data.website ? (
             <div className='flex flex-col gap-2 w-full py-6'>
               <h3 className='text-lg'>Social Presence:</h3>
-              <div className='flex flex-flow flex-wrap justify-start gap-4'>
+              <div className='flex flex-flow flex-wrap justify-start gap-[2rem]'>
                 {data.linkedin ? (
-                  <div className='pr-6'>
+                  <div className='align-middle self-center'>
                     <Link
                       className={socialLinks}
                       target='_blank'
@@ -116,8 +116,10 @@ export default async function ExpertAuthor(props: {
                       <FaLinkedin className={socialIcon} />
                       <TooltipProvider>
                         <Tooltip>
-                          <TooltipTrigger>LinkedIn</TooltipTrigger>
-                          <TooltipContent>
+                          <TooltipTrigger className='cursor-pointer'>
+                            LinkedIn
+                          </TooltipTrigger>
+                          <TooltipContent className='h-10'>
                             <p>Let&apos;s connect</p>
                           </TooltipContent>
                         </Tooltip>
@@ -128,7 +130,7 @@ export default async function ExpertAuthor(props: {
                   ''
                 )}
                 {data.twitter ? (
-                  <div className='pr-6'>
+                  <div className='align-middle self-center'>
                     <Link
                       className={socialLinks}
                       target='_blank'
@@ -137,8 +139,10 @@ export default async function ExpertAuthor(props: {
                       <FaSquareXTwitter className={socialIcon} />
                       <TooltipProvider>
                         <Tooltip>
-                          <TooltipTrigger>Twitter</TooltipTrigger>
-                          <TooltipContent>
+                          <TooltipTrigger className='cursor-pointer'>
+                            Twitter
+                          </TooltipTrigger>
+                          <TooltipContent className='h-10'>
                             <p>Come @ me</p>
                           </TooltipContent>
                         </Tooltip>
@@ -149,7 +153,7 @@ export default async function ExpertAuthor(props: {
                   ''
                 )}
                 {data.facebook ? (
-                  <div className='pr-6'>
+                  <div className='align-middle self-center'>
                     <Link
                       className={socialLinks}
                       target='_blank'
@@ -158,8 +162,10 @@ export default async function ExpertAuthor(props: {
                       <IoLogoFacebook className={socialIcon} />
                       <TooltipProvider>
                         <Tooltip>
-                          <TooltipTrigger>Facebook</TooltipTrigger>
-                          <TooltipContent>
+                          <TooltipTrigger className='cursor-pointer'>
+                            Facebook
+                          </TooltipTrigger>
+                          <TooltipContent className='h-10'>
                             <p>Can&apos;t we be friends</p>
                           </TooltipContent>
                         </Tooltip>
@@ -170,7 +176,7 @@ export default async function ExpertAuthor(props: {
                   ''
                 )}
                 {data.instagram ? (
-                  <div className='pr-6'>
+                  <div className='align-middle self-center'>
                     <Link
                       className={socialLinks}
                       target='_blank'
@@ -179,8 +185,10 @@ export default async function ExpertAuthor(props: {
                       <FaInstagram className={socialIcon} />
                       <TooltipProvider>
                         <Tooltip>
-                          <TooltipTrigger>Instagram</TooltipTrigger>
-                          <TooltipContent>
+                          <TooltipTrigger className='cursor-pointer'>
+                            Instagram
+                          </TooltipTrigger>
+                          <TooltipContent className='h-10'>
                             <p>Let&apos;s connect</p>
                           </TooltipContent>
                         </Tooltip>
@@ -191,7 +199,7 @@ export default async function ExpertAuthor(props: {
                   ''
                 )}
                 {data.website ? (
-                  <div className='pr-6'>
+                  <div className='align-middle self-center'>
                     <Link
                       className={socialLinks}
                       target='_blank'
@@ -200,8 +208,10 @@ export default async function ExpertAuthor(props: {
                       <TbWorldWww className={socialIcon} />
                       <TooltipProvider>
                         <Tooltip>
-                          <TooltipTrigger>Website</TooltipTrigger>
-                          <TooltipContent>
+                          <TooltipTrigger className='cursor-pointer'>
+                            Website
+                          </TooltipTrigger>
+                          <TooltipContent className='h-10'>
                             <p>Find us online</p>
                           </TooltipContent>
                         </Tooltip>
@@ -212,7 +222,7 @@ export default async function ExpertAuthor(props: {
                   ''
                 )}
                 {data.phone ? (
-                  <div className='pr-6'>
+                  <div className='align-middle self-center'>
                     <Link
                       className={socialLinks}
                       target='_blank'
@@ -221,8 +231,10 @@ export default async function ExpertAuthor(props: {
                       <MdPhoneIphone className={socialIcon} />
                       <TooltipProvider>
                         <Tooltip>
-                          <TooltipTrigger>Call {data.name}</TooltipTrigger>
-                          <TooltipContent>
+                          <TooltipTrigger className='cursor-pointer'>
+                            Call {data.name}
+                          </TooltipTrigger>
+                          <TooltipContent className='h-10'>
                             <p>Let&apos;s chat</p>
                           </TooltipContent>
                         </Tooltip>
@@ -233,7 +245,7 @@ export default async function ExpertAuthor(props: {
                   ''
                 )}
                 {data.location ? (
-                  <div className='pr-6'>
+                  <div className='align-middle self-center cursor-pointer'>
                     <Link
                       className={socialLinks}
                       target='_blank'
@@ -242,8 +254,10 @@ export default async function ExpertAuthor(props: {
                       <FaMapLocationDot className={socialIcon} />
                       <TooltipProvider>
                         <Tooltip>
-                          <TooltipTrigger>Get Directions</TooltipTrigger>
-                          <TooltipContent>
+                          <TooltipTrigger className='cursor-pointer'>
+                            Get Directions
+                          </TooltipTrigger>
+                          <TooltipContent className='h-10'>
                             <p>Come visit</p>
                           </TooltipContent>
                         </Tooltip>
