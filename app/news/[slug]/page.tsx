@@ -187,9 +187,12 @@ export default async function NewsArticle(props: {
           </Carousel>
         </div>
       ) : null}
-      <div className='my-12'>
-        <CardStack initialCards={data.cards} />
-      </div>
+
+      {data.propertyCard ? (
+        <div className='my-12'>
+          <CardStack initialCards={data.cards} />
+        </div>
+      ) : null}
 
       {data.leadership ? (
         <>
