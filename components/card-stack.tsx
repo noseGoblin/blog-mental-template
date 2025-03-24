@@ -38,41 +38,42 @@ interface CardStackProps {
 // Fallback data in case Sanity fetch fails
 const fallbackCards: CardData[] = [
   {
-    _id: "1",
-    title: "MAGNA COASTAL",
-    subtitle: "Invest in Future",
+    _id: '1',
+    title: 'MAGNA COASTAL',
+    subtitle: 'Invest in Future',
     description:
-      "An undiscovered coastal jewel on the Gulf of Aqaba near the Red Sea, Magna will be a place like nothing on earth.",
+      'An undiscovered coastal jewel on the Gulf of Aqaba near the Red Sea, Magna will be a place like nothing on earth.',
     imageUrl:
-      "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-    icon: "bed",
+      'https://cdn.sanity.io/images/v700z5ue/production/337c4450a7641a5f557da470861a4e2e1d5f3172-2560x1920.jpg',
+    icon: 'bed',
     imageAlt:
-    "An undiscovered coastal jewel on the Gulf of Aqaba near the Red Sea, Magna will be a place like nothing on earth.",
+      'An undiscovered coastal jewel on the Gulf of Aqaba near the Red Sea, Magna will be a place like nothing on earth.',
   },
   {
-    _id: "2",
-    title: "AZURE RETREAT",
-    subtitle: "Luxury Redefined",
-    description: "Experience the pinnacle of coastal living with panoramic ocean views and world-class amenities.",
+    _id: '2',
+    title: 'AZURE RETREAT',
+    subtitle: 'Luxury Redefined',
+    description:
+      'Experience the pinnacle of coastal living with panoramic ocean views and world-class amenities.',
     imageUrl:
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2760&q=80",
-    icon: "users",
+      'https://cdn.sanity.io/images/v700z5ue/production/10d509d522fba829ade629a9b09225ec0fc781bc-1200x800.jpg',
+    icon: 'users',
     imageAlt:
-    "Experience the pinnacle of coastal living with panoramic ocean views and world-class amenities.",
+      'Experience the pinnacle of coastal living with panoramic ocean views and world-class amenities.',
   },
   {
-    _id: "3",
-    title: "TERRA VISTA",
-    subtitle: "Natural Harmony",
+    _id: '3',
+    title: 'TERRA VISTA',
+    subtitle: 'Natural Harmony',
     description:
-      "Nestled between mountains and sea, this sustainable development offers the perfect balance of luxury and nature.",
+      'Nestled between mountains and sea, this sustainable development offers the perfect balance of luxury and nature.',
     imageUrl:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2760&q=80",
-    icon: "dollar",
+      'https://cdn.sanity.io/images/v700z5ue/production/22f8748cc535113f1a4b46de9f3fd56ec22694ae-930x620.webp',
+    icon: 'dollar',
     imageAlt:
-    "Nestled between mountains and sea, this sustainable development offers the perfect balance of luxury and nature.",
+      'Nestled between mountains and sea, this sustainable development offers the perfect balance of luxury and nature.',
   },
-]
+];
 
 export default function CardStack({ initialCards = [] }: CardStackProps) {
   const [cards, setCards] = useState<CardData[]>(initialCards.length > 0 ? initialCards : fallbackCards)
