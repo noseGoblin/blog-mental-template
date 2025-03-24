@@ -1,3 +1,35 @@
+# 2025.03.24
+* Update Sanity:
+  * @sanity/eslint-config-studio v5.0.2
+  * @sanity/ui v2.15.8
+  * @sanity/vision v3.80.1
+  * @types/react v19.0.12
+  * eslint v9.23.0
+  * prettier v3.5.3
+  * react v19.0.0
+  * react-dom v19.0.0
+  * react-is v19.0.0
+  * sanity v3.80.1
+  * styled-components v6.1.16
+  * typescript v5.8.2
+* Update:
+  * node_modules/@next/env v15.2.3
+  * @sanity/ui v2.15.8
+  * @tailwindcss/postcss v4.0.15
+  * lucide-react v0.483.0
+  * next v15.2.3
+  * next-sanity v9.9.5
+  * next-themes v0.4.6
+  * npm-check-updates v17.1.16
+  * react v19.0.0
+  * react-dom v19.0.0
+  * sanity v3.80.1
+  * sass v1.86.0
+* Refactor in CardStack component 
+  * Clear UseEffect linter build warning
+  * Add ...props to pass down props
+* Remove unused ThreeDCardDemo component
+
 # 2025.03.21.01
 * Fix typo in news page route
   * Due to updated query
