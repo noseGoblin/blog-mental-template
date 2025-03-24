@@ -14,6 +14,8 @@
   * typescript v5.8.2
 * Update:
   * node_modules/@next/env v15.2.3
+  * sanity v3.80.1
+  * sass v1.86.0
 
 # 2025.03.21.01
 * Fix typo in news page route
