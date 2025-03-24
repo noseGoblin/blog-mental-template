@@ -14,6 +14,15 @@
   * typescript v5.8.2
 * Update:
   * node_modules/@next/env v15.2.3
+  * @sanity/ui v2.15.8
+  * @tailwindcss/postcss v4.0.15
+  * lucide-react v0.483.0
+  * next v15.2.3
+  * next-sanity v9.9.5
+  * next-themes v0.4.6
+  * npm-check-updates v17.1.16
+  * react v19.0.0
+  * react-dom v19.0.0
   * sanity v3.80.1
   * sass v1.86.0
 
