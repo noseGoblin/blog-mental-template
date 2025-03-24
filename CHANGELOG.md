@@ -25,6 +25,10 @@
   * react-dom v19.0.0
   * sanity v3.80.1
   * sass v1.86.0
+* Refactor in CardStack component 
+  * Clear UseEffect linter build warning
+  * Add ...props to pass down props
+* Remove unused ThreeDCardDemo component
 
 # 2025.03.21.01
 * Fix typo in news page route

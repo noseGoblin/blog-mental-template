@@ -75,107 +75,123 @@ const fallbackCards: CardData[] = [
   },
 ];
 
-export default function CardStack({ initialCards = [] }: CardStackProps) {
-  const [cards, setCards] = useState<CardData[]>(initialCards.length > 0 ? initialCards : fallbackCards)
-  const [loading, setLoading] = useState(true)
-  const [extractedColors, setExtractedColors] = useState<boolean>(false)
+export default function CardStack({
+  initialCards = [],
+  ...props
+}: CardStackProps) {
+  const [cards, setCards] = useState<CardData[]>(
+    initialCards.length > 0 ? initialCards : fallbackCards
+  );
+  const [loading, setLoading] = useState(true);
+  const [extractedColors, setExtractedColors] = useState<boolean>(false);
 
   // Extract colors from images when component mounts
   useEffect(() => {
     const extractColors = async () => {
-      if (extractedColors) return
+      if (extractedColors) return;
 
-      const updatedCards = [...cards]
-      const colorThief = new ColorThief()
+      const updatedCards = [...cards];
+      const colorThief = new ColorThief();
 
       for (let i = 0; i < updatedCards.length; i++) {
-        const card = updatedCards[i]
+        const card = updatedCards[i];
         try {
-          const img = new Image()
-          img.crossOrigin = "Anonymous"
-          img.src = card.imageUrl
-          img.alt = card.imageAlt
+          const img = new Image();
+          img.crossOrigin = 'Anonymous';
+          img.src = card.imageUrl;
+          img.alt = card.imageAlt;
 
           await new Promise((resolve) => {
             img.onload = () => {
               try {
-                const palette = colorThief.getPalette(img, 3)
+                const palette = colorThief.getPalette(img, 3);
 
                 // Convert RGB to hex and create color scheme
-                const primaryColor = `rgb(${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]})`
-                const secondaryColor = `rgb(${palette[1][0]}, ${palette[1][1]}, ${palette[1][2]})`
-                const shadowColor = `rgba(${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]}, 0.6)`
+                const primaryColor = `rgb(${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]})`;
+                const secondaryColor = `rgb(${palette[1][0]}, ${palette[1][1]}, ${palette[1][2]})`;
+                const shadowColor = `rgba(${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]}, 0.6)`;
 
                 // Determine if text should be white or black based on primary color brightness
-                const brightness = (palette[0][0] * 299 + palette[0][1] * 587 + palette[0][2] * 114) / 1000
-                const textColor = brightness < 128 ? "#ffffff" : "#000000"
+                const brightness =
+                  (palette[0][0] * 299 +
+                    palette[0][1] * 587 +
+                    palette[0][2] * 114) /
+                  1000;
+                const textColor = brightness < 128 ? '#ffffff' : '#000000';
 
                 updatedCards[i].colors = {
                   primary: primaryColor,
                   secondary: secondaryColor,
                   text: textColor,
                   shadow: shadowColor,
-                }
+                };
               } catch (error) {
-                console.error("Error extracting colors:", error)
+                console.error('Error extracting colors:', error);
               }
-              resolve(null)
-            }
-          })
+              resolve(null);
+            };
+          });
         } catch (error) {
-          console.error("Error loading image:", error)
+          console.error('Error loading image:', error);
         }
       }
 
-      setCards(updatedCards)
-      setExtractedColors(true)
-      setLoading(false)
-    }
+      setCards(updatedCards);
+      setExtractedColors(true);
+      setLoading(false);
+    };
 
-    extractColors()
-  }, [cards, extractedColors])
+    extractColors();
+  }, [cards, extractedColors]);
 
   const removeCard = (id: string) => {
     setCards((prevCards) => {
-      const newCards = prevCards.filter((card) => card._id !== id)
+      const newCards = prevCards.filter((card) => card._id !== id);
 
       // Create a new card based on existing ones
-      const randomIndex = Math.floor(Math.random() * prevCards.length)
-      const baseCard = prevCards[randomIndex]
+      const randomIndex = Math.floor(Math.random() * prevCards.length);
+      const baseCard = prevCards[randomIndex];
 
       const newCard = {
         ...baseCard,
         _id: `new-${Date.now()}`,
         title: `NEW PROPERTY ${Date.now().toString().slice(-4)}`,
-        description: "A newly discovered property with unique features and amenities.",
-        icon: ["bed", "users", "dollar", "arrowUpRight"][Math.floor(Math.random() * 4)] as string,
-      }
+        description:
+          'A newly discovered property with unique features and amenities.',
+        icon: ['bed', 'users', 'dollar', 'arrowUpRight'][
+          Math.floor(Math.random() * 4)
+        ] as string,
+      };
 
-      return [...newCards, newCard]
-    })
-  }
+      return [...newCards, newCard];
+    });
+  };
 
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
-      case "bed":
-        return <Bed className="h-5 w-5" />
-      case "users":
-        return <Users className="h-5 w-5" />
-      case "dollar":
-        return <DollarSign className="h-5 w-5" />
-      case "arrowUpRight":
+      case 'bed':
+        return <Bed className='h-5 w-5' />;
+      case 'users':
+        return <Users className='h-5 w-5' />;
+      case 'dollar':
+        return <DollarSign className='h-5 w-5' />;
+      case 'arrowUpRight':
       default:
-        return <ArrowUpRight className="h-5 w-5" />
+        return <ArrowUpRight className='h-5 w-5' />;
     }
-  }
+  };
 
   if (loading) {
-    return <div className="flex h-96 w-full items-center justify-center">Loading cards...</div>
+    return (
+      <div className='flex h-96 w-full items-center justify-center'>
+        Loading cards...
+      </div>
+    );
   }
 
   return (
-    <div className="relative h-[600px] w-full">
-      <AnimatePresence mode="popLayout">
+    <div className='relative h-[600px] w-full'>
+      <AnimatePresence mode='popLayout'>
         {cards.slice(0, 3).map((card, index) => (
           <Card
             key={card._id}
@@ -188,7 +204,7 @@ export default function CardStack({ initialCards = [] }: CardStackProps) {
         ))}
       </AnimatePresence>
     </div>
-  )
+  );
 }
 
 interface CardProps {
