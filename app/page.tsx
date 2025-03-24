@@ -4,7 +4,6 @@ import { client, urlFor } from './lib/sanity';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-// import ThreeDCardDemo from '@/components/3d-card-demo';
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card"
 
 export const revalidate = 600; // revalidate every 30 seconds

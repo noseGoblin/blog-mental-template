@@ -194,6 +194,12 @@ export default async function NewsArticle(props: {
         </div>
       ) : null}
 
+      {/* <div className='w-full flex flex-row gap-2 mt-6 text-white'>
+        {Array.from(data.cards).map((initialCards, index) => (
+          <CardStack key={index} initialCards={data.cards} />
+        ))}
+      </div> */}
+
       {data.leadership ? (
         <>
           <div className='w-full flex flex-col py-4 mx-auto'>

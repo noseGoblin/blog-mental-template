@@ -38,143 +38,160 @@ interface CardStackProps {
 // Fallback data in case Sanity fetch fails
 const fallbackCards: CardData[] = [
   {
-    _id: "1",
-    title: "MAGNA COASTAL",
-    subtitle: "Invest in Future",
+    _id: '1',
+    title: 'MAGNA COASTAL',
+    subtitle: 'Invest in Future',
     description:
-      "An undiscovered coastal jewel on the Gulf of Aqaba near the Red Sea, Magna will be a place like nothing on earth.",
+      'An undiscovered coastal jewel on the Gulf of Aqaba near the Red Sea, Magna will be a place like nothing on earth.',
     imageUrl:
-      "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-    icon: "bed",
+      'https://cdn.sanity.io/images/v700z5ue/production/337c4450a7641a5f557da470861a4e2e1d5f3172-2560x1920.jpg',
+    icon: 'bed',
     imageAlt:
-    "An undiscovered coastal jewel on the Gulf of Aqaba near the Red Sea, Magna will be a place like nothing on earth.",
+      'An undiscovered coastal jewel on the Gulf of Aqaba near the Red Sea, Magna will be a place like nothing on earth.',
   },
   {
-    _id: "2",
-    title: "AZURE RETREAT",
-    subtitle: "Luxury Redefined",
-    description: "Experience the pinnacle of coastal living with panoramic ocean views and world-class amenities.",
+    _id: '2',
+    title: 'AZURE RETREAT',
+    subtitle: 'Luxury Redefined',
+    description:
+      'Experience the pinnacle of coastal living with panoramic ocean views and world-class amenities.',
     imageUrl:
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2760&q=80",
-    icon: "users",
+      'https://cdn.sanity.io/images/v700z5ue/production/10d509d522fba829ade629a9b09225ec0fc781bc-1200x800.jpg',
+    icon: 'users',
     imageAlt:
-    "Experience the pinnacle of coastal living with panoramic ocean views and world-class amenities.",
+      'Experience the pinnacle of coastal living with panoramic ocean views and world-class amenities.',
   },
   {
-    _id: "3",
-    title: "TERRA VISTA",
-    subtitle: "Natural Harmony",
+    _id: '3',
+    title: 'TERRA VISTA',
+    subtitle: 'Natural Harmony',
     description:
-      "Nestled between mountains and sea, this sustainable development offers the perfect balance of luxury and nature.",
+      'Nestled between mountains and sea, this sustainable development offers the perfect balance of luxury and nature.',
     imageUrl:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2760&q=80",
-    icon: "dollar",
+      'https://cdn.sanity.io/images/v700z5ue/production/22f8748cc535113f1a4b46de9f3fd56ec22694ae-930x620.webp',
+    icon: 'dollar',
     imageAlt:
-    "Nestled between mountains and sea, this sustainable development offers the perfect balance of luxury and nature.",
+      'Nestled between mountains and sea, this sustainable development offers the perfect balance of luxury and nature.',
   },
-]
+];
 
-export default function CardStack({ initialCards = [] }: CardStackProps) {
-  const [cards, setCards] = useState<CardData[]>(initialCards.length > 0 ? initialCards : fallbackCards)
-  const [loading, setLoading] = useState(true)
-  const [extractedColors, setExtractedColors] = useState<boolean>(false)
+export default function CardStack({
+  initialCards = [],
+  ...props
+}: CardStackProps) {
+  const [cards, setCards] = useState<CardData[]>(
+    initialCards.length > 0 ? initialCards : fallbackCards
+  );
+  const [loading, setLoading] = useState(true);
+  const [extractedColors, setExtractedColors] = useState<boolean>(false);
 
   // Extract colors from images when component mounts
   useEffect(() => {
     const extractColors = async () => {
-      if (extractedColors) return
+      if (extractedColors) return;
 
-      const updatedCards = [...cards]
-      const colorThief = new ColorThief()
+      const updatedCards = [...cards];
+      const colorThief = new ColorThief();
 
       for (let i = 0; i < updatedCards.length; i++) {
-        const card = updatedCards[i]
+        const card = updatedCards[i];
         try {
-          const img = new Image()
-          img.crossOrigin = "Anonymous"
-          img.src = card.imageUrl
-          img.alt = card.imageAlt
+          const img = new Image();
+          img.crossOrigin = 'Anonymous';
+          img.src = card.imageUrl;
+          img.alt = card.imageAlt;
 
           await new Promise((resolve) => {
             img.onload = () => {
               try {
-                const palette = colorThief.getPalette(img, 3)
+                const palette = colorThief.getPalette(img, 3);
 
                 // Convert RGB to hex and create color scheme
-                const primaryColor = `rgb(${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]})`
-                const secondaryColor = `rgb(${palette[1][0]}, ${palette[1][1]}, ${palette[1][2]})`
-                const shadowColor = `rgba(${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]}, 0.6)`
+                const primaryColor = `rgb(${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]})`;
+                const secondaryColor = `rgb(${palette[1][0]}, ${palette[1][1]}, ${palette[1][2]})`;
+                const shadowColor = `rgba(${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]}, 0.6)`;
 
                 // Determine if text should be white or black based on primary color brightness
-                const brightness = (palette[0][0] * 299 + palette[0][1] * 587 + palette[0][2] * 114) / 1000
-                const textColor = brightness < 128 ? "#ffffff" : "#000000"
+                const brightness =
+                  (palette[0][0] * 299 +
+                    palette[0][1] * 587 +
+                    palette[0][2] * 114) /
+                  1000;
+                const textColor = brightness < 128 ? '#ffffff' : '#000000';
 
                 updatedCards[i].colors = {
                   primary: primaryColor,
                   secondary: secondaryColor,
                   text: textColor,
                   shadow: shadowColor,
-                }
+                };
               } catch (error) {
-                console.error("Error extracting colors:", error)
+                console.error('Error extracting colors:', error);
               }
-              resolve(null)
-            }
-          })
+              resolve(null);
+            };
+          });
         } catch (error) {
-          console.error("Error loading image:", error)
+          console.error('Error loading image:', error);
         }
       }
 
-      setCards(updatedCards)
-      setExtractedColors(true)
-      setLoading(false)
-    }
+      setCards(updatedCards);
+      setExtractedColors(true);
+      setLoading(false);
+    };
 
-    extractColors()
-  }, [cards, extractedColors])
+    extractColors();
+  }, [cards, extractedColors]);
 
   const removeCard = (id: string) => {
     setCards((prevCards) => {
-      const newCards = prevCards.filter((card) => card._id !== id)
+      const newCards = prevCards.filter((card) => card._id !== id);
 
       // Create a new card based on existing ones
-      const randomIndex = Math.floor(Math.random() * prevCards.length)
-      const baseCard = prevCards[randomIndex]
+      const randomIndex = Math.floor(Math.random() * prevCards.length);
+      const baseCard = prevCards[randomIndex];
 
       const newCard = {
         ...baseCard,
         _id: `new-${Date.now()}`,
         title: `NEW PROPERTY ${Date.now().toString().slice(-4)}`,
-        description: "A newly discovered property with unique features and amenities.",
-        icon: ["bed", "users", "dollar", "arrowUpRight"][Math.floor(Math.random() * 4)] as string,
-      }
+        description:
+          'A newly discovered property with unique features and amenities.',
+        icon: ['bed', 'users', 'dollar', 'arrowUpRight'][
+          Math.floor(Math.random() * 4)
+        ] as string,
+      };
 
-      return [...newCards, newCard]
-    })
-  }
+      return [...newCards, newCard];
+    });
+  };
 
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
-      case "bed":
-        return <Bed className="h-5 w-5" />
-      case "users":
-        return <Users className="h-5 w-5" />
-      case "dollar":
-        return <DollarSign className="h-5 w-5" />
-      case "arrowUpRight":
+      case 'bed':
+        return <Bed className='h-5 w-5' />;
+      case 'users':
+        return <Users className='h-5 w-5' />;
+      case 'dollar':
+        return <DollarSign className='h-5 w-5' />;
+      case 'arrowUpRight':
       default:
-        return <ArrowUpRight className="h-5 w-5" />
+        return <ArrowUpRight className='h-5 w-5' />;
     }
-  }
+  };
 
   if (loading) {
-    return <div className="flex h-96 w-full items-center justify-center">Loading cards...</div>
+    return (
+      <div className='flex h-96 w-full items-center justify-center'>
+        Loading cards...
+      </div>
+    );
   }
 
   return (
-    <div className="relative h-[600px] w-full">
-      <AnimatePresence mode="popLayout">
+    <div className='relative h-[600px] w-full'>
+      <AnimatePresence mode='popLayout'>
         {cards.slice(0, 3).map((card, index) => (
           <Card
             key={card._id}
@@ -187,7 +204,7 @@ export default function CardStack({ initialCards = [] }: CardStackProps) {
         ))}
       </AnimatePresence>
     </div>
-  )
+  );
 }
 
 interface CardProps {
