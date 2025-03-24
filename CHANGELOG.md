@@ -1,3 +1,13 @@
+# 2025.03.24
+* Update Sanity:
+  * @sanity/eslint-config-studio v5.0.2
+  * prettier v3.5.3
+  * sanity v3.80.1
+  * styled-components v6.1.16
+  * typescript v5.8.2
+* Update:
+  * node_modules/@next/env v15.2.3
+
 # 2025.03.21.01
 * Fix typo in news page route
   * Due to updated query
