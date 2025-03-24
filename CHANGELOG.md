@@ -1,7 +1,14 @@
 # 2025.03.24
 * Update Sanity:
   * @sanity/eslint-config-studio v5.0.2
+  * @sanity/ui v2.15.8
+  * @sanity/vision v3.80.1
+  * @types/react v19.0.12
+  * eslint v9.23.0
   * prettier v3.5.3
+  * react v19.0.0
+  * react-dom v19.0.0
+  * react-is v19.0.0
   * sanity v3.80.1
   * styled-components v6.1.16
   * typescript v5.8.2
