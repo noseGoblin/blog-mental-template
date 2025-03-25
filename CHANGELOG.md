@@ -1,6 +1,6 @@
 # 2025.03.##
 * Add [Alert Dialog](https://ui.shadcn.com/docs/components/alert-dialog) shadcn/ui component
-  * Add alertType to schema types
+  * Add alertDialog to schema types
   * Add Alert Dialog to blog post page
 
 # 2025.03.24
