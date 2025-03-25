@@ -6,6 +6,7 @@ import imageGallery from './imageGallery'
 import buttonType from './buttonType'
 import youTube from './youTube'
 import propertyCard from './propertyCard'
+import alertDialog from './alertDialog'
 
 export const schemaTypes = [
   blogType,
@@ -16,4 +17,5 @@ export const schemaTypes = [
   buttonType,
   youTube,
   propertyCard,
+  alertDialog,
 ]

@@ -92,5 +92,10 @@ export const authorType = defineType({
       type: 'reference',
       to: [{type: 'button'}],
     }),
+    defineField({
+      name: 'alertDialog',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'alertDialog'}]}],
+    }),
   ],
 })
