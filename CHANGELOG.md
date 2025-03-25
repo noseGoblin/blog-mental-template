@@ -1,7 +1,9 @@
 # 2025.03.##
 * Add [Alert Dialog](https://ui.shadcn.com/docs/components/alert-dialog) shadcn/ui component
   * Add alertDialog to schema types
+    * Add alertDialog to blogType and authorType
   * Add Alert Dialog to blog post page
+* Update Sanity CLI v3.81.0
 
 # 2025.03.24
 * Update Sanity:
