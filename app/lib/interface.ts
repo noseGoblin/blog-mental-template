@@ -8,6 +8,16 @@ export interface simpleNewsCard {
   excerpt: string;
 }
 
+export interface simpleBioCard {
+  name: string;
+  credentials: string;
+  currentSlug: string;
+  currentCat: string[];
+  date: string;
+  headshot: any;
+  priority: number;
+}
+
 export interface fullArticle {
   title: string;
   author: string;
