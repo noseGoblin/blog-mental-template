@@ -1,3 +1,13 @@
+# 2025.03.25.01
+* Udpdate formatting on alertDialog in blog post page
+* Add expert listing page
+  * Move expert layout into /expert root route directory
+  * Add simpleBioCard interface
+* Update page titles' dark mode to socials color
+* Update author social links to socials color
+* Remove usplash domain from next.config.js
+* Remove unused imports from home page
+
 # 2025.03.25
 * Add [Alert Dialog](https://ui.shadcn.com/docs/components/alert-dialog) shadcn/ui component
   * Add alertDialog to schema types
