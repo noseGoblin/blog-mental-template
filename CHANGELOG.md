@@ -2,7 +2,9 @@
 * Add [Alert Dialog](https://ui.shadcn.com/docs/components/alert-dialog) shadcn/ui component
   * Add alertDialog to schema types
     * Add alertDialog to blogType and authorType
-  * Add Alert Dialog to blog post page
+  * Add Alert Dialog to blog post and author page routes
+    * Add alert to queries
+  * Add alert to bioPage and fullArticle interfaces
 * Update Sanity CLI v3.81.0
 
 # 2025.03.24

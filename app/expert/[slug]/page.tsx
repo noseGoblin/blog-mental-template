@@ -19,6 +19,7 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
 import { IoLogoFacebook } from 'react-icons/io';
 import { TbWorldWww } from 'react-icons/tb';
+import AlertDialogInstance from '@/components/AlertDialog';
 
 export const revalidate = 600; // revalidate every 30 seconds
 
@@ -48,9 +49,22 @@ async function getData(slug: string) {
       'buttonColor': customButton->color,
       'buttonLink': customButton->link,
       'buttonText': customButton->text,
+      'alert': alertDialog[]->{
+        _id,
+        name,
+        buttonText,
+        buttonColor,
+        dialogTitle,
+        dialogDescription,
+        closeText,
+        closeLink,
+        ctaText,
+        ctalink,
+      },
   }[0]`;
 
   const data = await client.fetch(query);
+
   return data;
 }
 
@@ -295,6 +309,12 @@ export default async function ExpertAuthor(props: {
               ''
             )}
           </div>
+
+          {data.alert ? (
+            <div className='my-12'>
+              <AlertDialogInstance props={data.alert} />
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

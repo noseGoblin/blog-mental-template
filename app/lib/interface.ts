@@ -30,6 +30,17 @@ export interface fullArticle {
   leadership: any[];
   youTube: string;
   youTubeUrl: string;
+  alert: {
+    name: string;
+    buttonText: string;
+    buttonColor: string;
+    dialogTitle: string;
+    dialogDescription: string;
+    closeText: string;
+    closeLink: string;
+    ctaText: string;
+    ctalink: string;
+  };
 }
 
 export interface bioPage {
@@ -55,6 +66,17 @@ export interface bioPage {
   buttonLink: string;
   buttonText: string;
   color: 'blue' | 'orange' | 'green';
+  alert: {
+    name: string;
+    buttonText: string;
+    buttonColor: string;
+    dialogTitle: string;
+    dialogDescription: string;
+    closeText: string;
+    closeLink: string;
+    ctaText: string;
+    ctalink: string;
+  };
 }
 
 export interface fullCategory {

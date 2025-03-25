@@ -4,6 +4,13 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'name',
+      title: 'Alert Name',
+      type: 'string',
+      description:
+        'This name will be used to reference the alert dialog instance, so we can find it later. Please try to keep it descriptive and unique.',
+    },
+    {
       name: 'buttonText',
       title: 'Initial Button Text',
       description: 'Text for the initial button. This button will open the alert dialog.',

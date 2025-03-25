@@ -66,6 +66,18 @@ async function getData(slug: string) {
       },
       youTube,
       'youTubeUrl': youTube.url,
+      'alert': alertDialog[]->{
+        _id,
+        name,
+        buttonText,
+        buttonColor,
+        dialogTitle,
+        dialogDescription,
+        closeText,
+        closeLink,
+        ctaText,
+        ctalink,
+      },
   }[0]`;
   const data = await client.fetch(query);
 
