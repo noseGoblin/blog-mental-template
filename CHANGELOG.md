@@ -1,4 +1,4 @@
-# 2025.03.##
+# 2025.03.25
 * Add [Alert Dialog](https://ui.shadcn.com/docs/components/alert-dialog) shadcn/ui component
   * Add alertDialog to schema types
     * Add alertDialog to blogType and authorType
@@ -9,6 +9,7 @@
 * Update Sanity CLI v3.81.0
 * Update Button component `outline` styles
 * Fix `socials` CSS color variable
+* Remove unused SASS & CSS files
 
 # 2025.03.24
 * Update Sanity:
