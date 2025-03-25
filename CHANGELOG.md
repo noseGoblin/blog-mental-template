@@ -1,3 +1,16 @@
+# 2025.03.25
+* Add [Alert Dialog](https://ui.shadcn.com/docs/components/alert-dialog) shadcn/ui component
+  * Add alertDialog to schema types
+    * Add alertDialog to blogType and authorType
+  * Add Alert Dialog to blog post and author page routes
+    * Add alert to queries
+  * Add alertDialog interface
+    * Add interface to blog post and author page routes
+* Update Sanity CLI v3.81.0
+* Update Button component `outline` styles
+* Fix `socials` CSS color variable
+* Remove unused SASS & CSS files
+
 # 2025.03.24
 * Update Sanity:
   * @sanity/eslint-config-studio v5.0.2
