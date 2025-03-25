@@ -90,5 +90,10 @@ export const blogType = defineType({
       type: 'array',
       of: [{type: 'reference', to: [{type: 'author'}]}],
     }),
+    defineField({
+      name: 'alertDialog',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'alertDialog'}]}],
+    }),
   ],
 })

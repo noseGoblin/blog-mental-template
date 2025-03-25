@@ -1,4 +1,4 @@
-import { bioPage } from '@/app/lib/interface';
+import { bioPage, alertDialog } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
 import { Button } from '@/components/ui/button';
 import {
@@ -19,6 +19,7 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
 import { IoLogoFacebook } from 'react-icons/io';
 import { TbWorldWww } from 'react-icons/tb';
+import AlertDialogInstance from '@/components/AlertDialog';
 
 export const revalidate = 600; // revalidate every 30 seconds
 
@@ -48,9 +49,22 @@ async function getData(slug: string) {
       'buttonColor': customButton->color,
       'buttonLink': customButton->link,
       'buttonText': customButton->text,
+      'alert': alertDialog[0]->{
+        _id,
+        name,
+        buttonText,
+        buttonColor,
+        dialogTitle,
+        dialogDescription,
+        closeText,
+        closeLink,
+        ctaText,
+        ctalink,
+      },
   }[0]`;
 
   const data = await client.fetch(query);
+
   return data;
 }
 
@@ -59,6 +73,7 @@ export default async function ExpertAuthor(props: {
 }) {
   const params = await props.params;
   const data: bioPage = await getData(params.slug);
+  const alert: alertDialog = data.alert;
 
   const socialIcon = 'inline-block h-[1.2rem] w-[1.2rem]';
   const socialLinks =
@@ -295,6 +310,12 @@ export default async function ExpertAuthor(props: {
               ''
             )}
           </div>
+
+          {data.alert ? (
+            <div className='my-12'>
+              <AlertDialogInstance {...alert} />
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
