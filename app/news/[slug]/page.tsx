@@ -96,7 +96,7 @@ export default async function NewsArticle(props: {
   return (
     <div>
       <h1>
-        <span className='block text-base text-center text-primary font-semibold tracking-wide uppercase'>
+        <span className='block text-base text-center text-primary font-semibold tracking-wide uppercase dark:text-socials'>
           alliantgroup - News
         </span>
         <span className='block text-3xl text-left font-bold tracking-tight leading-8 sm:text-4xl mt-8'>
@@ -265,7 +265,7 @@ export default async function NewsArticle(props: {
       ) : null}
 
       {data.alert ? (
-        <div className='my-12'>
+        <div className='flex flex-col py-6 mx-auto'>
           <AlertDialogInstance {...alert} />
         </div>
       ) : null}
