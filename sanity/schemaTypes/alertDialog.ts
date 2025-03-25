@@ -33,6 +33,7 @@ export default {
       name: 'dialogTitle',
       title: 'Dialog Title',
       type: 'string',
+      initialValue: 'Close',
     },
     {
       name: 'dialogDescription',
@@ -40,14 +41,24 @@ export default {
       type: 'string',
     },
     {
-      name: 'cancelText',
+      name: 'closeText',
       title: 'Cancel Button Text',
+      type: 'string',
+      description: 'Text for the cancel button. Examples: "Close", "Cancel", "No Thanks"',
+      initialValue: 'Cancel',
+    },
+    {
+      name: 'closeLink',
+      title: 'Cancel Button Link',
+      description:
+        'This will close the dialog and execute the action of the initial button. Add the full URL including https:// for external links. If linking to a page on this site, use the relative path. Example (homepage): /',
       type: 'string',
     },
     {
       name: 'ctaText',
       title: 'CTA Button Text',
       type: 'string',
+      initialValue: 'Learn More',
     },
     {
       name: 'ctalink',
