@@ -1,7 +1,7 @@
 import { SignupForm } from '@/components/SignupForm';
 import ImageGallery from '@/components/ImageGallery';
 import YouTubeEmbed from '@/components/YouTubeEmbed';
-import { fullArticle } from '@/app/lib/interface';
+import { fullArticle, alertDialog } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
@@ -23,6 +23,7 @@ import { PortableText } from 'next-sanity';
 import Image from 'next/image';
 import Link from 'next/link';
 import CardStack from '@/components/card-stack';
+import AlertDialogInstance from '@/components/AlertDialog';
 
 export const revalidate = 600; // revalidate every 30 seconds
 
@@ -90,6 +91,7 @@ export default async function NewsArticle(props: {
   const params = await props.params;
   const data: fullArticle = await getData(params.slug);
   const newDate = new Date(data.date).toLocaleDateString('en-US');
+  const alert: alertDialog = data.alert;
 
   return (
     <div>
@@ -260,6 +262,12 @@ export default async function NewsArticle(props: {
             </div>
           </div>
         </>
+      ) : null}
+
+      {data.alert ? (
+        <div className='my-12'>
+          <AlertDialogInstance {...alert} />
+        </div>
       ) : null}
 
       <div className='flex flex-col py-6 mx-auto'>

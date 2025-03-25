@@ -1,6 +1,4 @@
-'use client'
-
-import { bioPage } from '@/app/lib/interface';
+import { alertDialog } from '@/app/lib/interface';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -11,26 +9,34 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
+} from '@/components/ui/alert-dialog';
+import { Button } from './ui/button';
 
-export default function AlertDialogInstance({ props }: { props: bioPage }) {
-  
+export default async function AlertDialogInstance({ ...alert }: alertDialog) {
   return (
-  <AlertDialog>
-  <AlertDialogTrigger>{props.name}</AlertDialogTrigger>
-  <AlertDialogContent>
-    <AlertDialogHeader>
-      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-      <AlertDialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </AlertDialogDescription>
-    </AlertDialogHeader>
-    <AlertDialogFooter>
-      <AlertDialogCancel>Cancel</AlertDialogCancel>
-      <AlertDialogAction>Continue</AlertDialogAction>
-    </AlertDialogFooter>
-  </AlertDialogContent>
-</AlertDialog>
-)
+    <AlertDialog>
+      <AlertDialogTrigger className='dark:text-background'>
+        <Button variant='outline'>{alert.buttonText || 'Open'}</Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle className='dark:text-foreground'>
+            {alert?.name || 'Are you absolutely sure?'}
+          </AlertDialogTitle>
+          <AlertDialogDescription>
+            {alert?.dialogDescription ||
+              'This action cannot be undone. This will permanently delete your account and remove your data from our servers.'}
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel className='dark:text-foreground'>
+            {alert?.closeText || 'Cancel'}
+          </AlertDialogCancel>
+          <AlertDialogAction className='text-background'>
+            {alert?.ctaText || 'Learn More'}
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
 }

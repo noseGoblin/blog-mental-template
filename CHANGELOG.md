@@ -4,8 +4,11 @@
     * Add alertDialog to blogType and authorType
   * Add Alert Dialog to blog post and author page routes
     * Add alert to queries
-  * Add alert to bioPage and fullArticle interfaces
+  * Add alertDialog interface
+    * Add interface to blog post and author page routes
 * Update Sanity CLI v3.81.0
+* Update Button component `outline` styles
+* Fix `socials` CSS color variable
 
 # 2025.03.24
 * Update Sanity:

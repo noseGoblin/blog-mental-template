@@ -1,4 +1,4 @@
-import { bioPage } from '@/app/lib/interface';
+import { bioPage, alertDialog } from '@/app/lib/interface';
 import { client, urlFor } from '@/app/lib/sanity';
 import { Button } from '@/components/ui/button';
 import {
@@ -49,7 +49,7 @@ async function getData(slug: string) {
       'buttonColor': customButton->color,
       'buttonLink': customButton->link,
       'buttonText': customButton->text,
-      'alert': alertDialog[]->{
+      'alert': alertDialog[0]->{
         _id,
         name,
         buttonText,
@@ -73,6 +73,7 @@ export default async function ExpertAuthor(props: {
 }) {
   const params = await props.params;
   const data: bioPage = await getData(params.slug);
+  const alert: alertDialog = data.alert;
 
   const socialIcon = 'inline-block h-[1.2rem] w-[1.2rem]';
   const socialLinks =
@@ -312,7 +313,7 @@ export default async function ExpertAuthor(props: {
 
           {data.alert ? (
             <div className='my-12'>
-              <AlertDialogInstance props={data.alert} />
+              <AlertDialogInstance {...alert} />
             </div>
           ) : null}
         </div>
