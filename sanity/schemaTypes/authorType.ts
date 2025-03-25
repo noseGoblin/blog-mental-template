@@ -45,6 +45,13 @@ export const authorType = defineType({
       type: 'body',
     }),
     defineField({
+      name: 'priority',
+      type: 'number',
+      title: 'Priority',
+      description:
+        'Set the priority of the author. Lower number means higher priority on https://blog.alliantgroup.com/expert listing page. Example: Dhaval Jadav has priority 0.',
+    }),
+    defineField({
       name: 'categories',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'category'}]}],

@@ -8,13 +8,12 @@ export const revalidate = 6; // revalidate every 30 seconds
 
 async function getData() {
   const query = `
-  *[_type == 'author'] | order(date asc) {
+  *[_type == 'author'] | order(priority asc, _updatedAt desc)  {
     name,
     credentials,
     'currentSlug': slug.current,
-    'currentCat': categories[],
-    date,
     headshot,
+    priority,
   }`;
 
   const data = await client.fetch(query);
@@ -27,13 +26,13 @@ export default async function ExpertAuthors() {
 
   return (
     <div className='w-full h-screen py-5'>
-      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mt-5 items-start justify-center items-center '>
+      <div className='w-full h-full grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mt-5 items-start justify-between '>
         {data.map((post, idx) => (
           <CardContainer
             key={idx}
-            className='max-w-[400px] flex flex-col justify-center items-center'
+            className='w-full h-full min-w-[275px] min-h-[420px]'
           >
-            <CardBody className='bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-full rounded-xl p-6 border'>
+            <CardBody className='bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-full rounded-xl p-6 border flex flex-col justify-center items-stretch'>
               <Link href={`/expert/${post.currentSlug}`}>
                 <CardItem
                   translateZ='100'
@@ -42,11 +41,10 @@ export default async function ExpertAuthors() {
                   <Image
                     src={urlFor(post.headshot).url()}
                     alt={post.name}
-                    width={200}
-                    height={200}
-                    className='dark:border-white/[0.2] border-black/[0.1] border h-full object-cover rounded-xl group-hover/card:shadow-xl justify-center self-center'
+                    width={150}
+                    height={150}
+                    className='h-full object-cover rounded-xl'
                     loading='lazy'
-                    sizes='(max-width: 200px)'
                   />
                 </CardItem>
                 <CardItem

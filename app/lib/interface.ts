@@ -15,6 +15,7 @@ export interface simpleBioCard {
   currentCat: string[];
   date: string;
   headshot: any;
+  priority: number;
 }
 
 export interface fullArticle {

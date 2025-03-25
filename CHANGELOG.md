@@ -3,6 +3,9 @@
 * Add expert listing page
   * Move expert layout into /expert root route directory
   * Add simpleBioCard interface
+  * Add priority to Expert Author schema type
+    * Experts query by priority, lower number = higher priority
+      * Fallback is updated date
 * Update page titles' dark mode to socials color
 * Update author social links to socials color
 * Remove usplash domain from next.config.js
