@@ -22,7 +22,7 @@ import { CalendarDays } from 'lucide-react';
 import { PortableText } from 'next-sanity';
 import Image from 'next/image';
 import Link from 'next/link';
-import CardStack from '@/components/card-stack';
+import CardStack from '@/components/CardStack';
 import AlertDialogInstance from '@/components/AlertDialog';
 
 export const revalidate = 600; // revalidate every 30 seconds
@@ -207,12 +207,6 @@ export default async function NewsArticle(props: {
           <CardStack initialCards={data.cards} />
         </div>
       ) : null}
-
-      {/* <div className='w-full flex flex-row gap-2 mt-6 text-white'>
-        {Array.from(data.cards).map((initialCards, index) => (
-          <CardStack key={index} initialCards={data.cards} />
-        ))}
-      </div> */}
 
       {data.leadership ? (
         <>

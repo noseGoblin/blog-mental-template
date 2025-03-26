@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ArrowUpRight, Bed, Users, DollarSign } from "lucide-react"
+import Image from "next/image"
 
 // @ts-ignore
 import ColorThief from "colorthief"
@@ -297,9 +298,15 @@ function Card({ card, index, removeCard, getIconComponent, totalCards }: CardPro
           <div
             className="aspect-video w-full overflow-hidden rounded-xl bg-cover bg-center"
             style={{
-              backgroundImage: `url(${card.imageUrl})`,
               boxShadow: `0 10px 30px ${card.colors?.shadow || "rgba(0, 0, 0, 0.3)"}`,
             }}
+          />
+          <Image
+            src={card.imageUrl}
+            alt={card.imageAlt}
+            width={800}
+            height={400}
+            className="object-cover rounded-xl"
           />
         </div>
 
