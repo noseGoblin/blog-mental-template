@@ -182,7 +182,7 @@ export default async function NewsArticle(props: {
                         <span className='content-start'>
                           <Image
                             src={urlFor(image).width(800).height(400).url()}
-                            alt={image.alt}
+                            alt={image?.alt || ''}
                             width={800}
                             height={400}
                             className='object-cover rounded-t-lg'
