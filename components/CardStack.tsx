@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ArrowUpRight, Bed, Users, DollarSign } from "lucide-react"
-import Image from "next/image"
+import NextImage from 'next/image';
 
 // @ts-ignore
 import ColorThief from "colorthief"
@@ -97,7 +97,7 @@ export default function CardStack({
       for (let i = 0; i < updatedCards.length; i++) {
         const card = updatedCards[i];
         try {
-          const img = new Image();
+          const img = new window.Image();
           img.crossOrigin = 'Anonymous';
           img.src = card.imageUrl;
           img.alt = card.imageAlt;
@@ -237,102 +237,107 @@ function Card({ card, index, removeCard, getIconComponent, totalCards }: CardPro
         transition: { duration: 0.2 },
       }}
       transition={{
-        type: "spring",
+        type: 'spring',
         stiffness: 500,
         damping: 50,
         mass: 1,
       }}
       style={{
         zIndex,
-        boxShadow: `0 ${10 + index * 5}px ${30 + index * 10}px ${card.colors?.shadow || "rgba(0, 0, 0, 0.3)"}`,
-        backgroundColor: card.colors?.primary || "#1a1a1a",
+        boxShadow: `0 ${10 + index * 5}px ${30 + index * 10}px ${card.colors?.shadow || 'rgba(0, 0, 0, 0.3)'}`,
+        backgroundColor: card.colors?.primary || '#1a1a1a',
       }}
-      className="absolute left-0 top-0 h-full w-full cursor-grab overflow-hidden rounded-2xl active:cursor-grabbing"
+      className='absolute left-0 top-0 h-full w-full cursor-grab overflow-hidden rounded-2xl active:cursor-grabbing'
       drag={index === 0} // Allow drag in all directions for the top card
       dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
       dragElastic={0.6}
       onDragEnd={(_, info) => {
         if (index === 0) {
-          const distance = Math.sqrt(Math.pow(info.offset.x, 2) + Math.pow(info.offset.y, 2))
+          const distance = Math.sqrt(
+            Math.pow(info.offset.x, 2) + Math.pow(info.offset.y, 2)
+          );
           if (distance > 150) {
             // Adjust this threshold as needed
-            removeCard(card._id)
+            removeCard(card._id);
           }
         }
       }}
       whileDrag={{
         scale: 1.05,
-        boxShadow: `0 ${15 + index * 5}px ${40 + index * 10}px ${card.colors?.shadow || "rgba(0, 0, 0, 0.3)"}`,
+        boxShadow: `0 ${15 + index * 5}px ${40 + index * 10}px ${card.colors?.shadow || 'rgba(0, 0, 0, 0.3)'}`,
       }}
     >
       <motion.div
-        className="relative flex h-full flex-col overflow-hidden rounded-2xl"
-        style={{ color: card.colors?.text || "#ffffff" }}
+        className='relative flex h-full flex-col overflow-hidden rounded-2xl'
+        style={{ color: card.colors?.text || '#ffffff' }}
       >
         {/* Card Header */}
-        <div className="flex items-center justify-between p-4">
+        <div className='flex items-center justify-between p-4'>
           <div
-            className="rounded-full bg-opacity-20 p-2"
-            style={{ backgroundColor: `${card.colors?.text || "#ffffff"}20` }}
+            className='rounded-full bg-opacity-20 p-2'
+            style={{ backgroundColor: `${card.colors?.text || '#ffffff'}20` }}
           >
             {getIconComponent(card.icon)}
           </div>
           <div
-            className="rounded-full bg-opacity-20 p-2"
-            style={{ backgroundColor: `${card.colors?.text || "#ffffff"}20` }}
+            className='rounded-full bg-opacity-20 p-2'
+            style={{ backgroundColor: `${card.colors?.text || '#ffffff'}20` }}
           >
-            <ArrowUpRight className="h-5 w-5" />
+            <ArrowUpRight className='h-5 w-5' />
           </div>
         </div>
 
         {/* Card Title */}
-        <div className="px-4 py-2">
-          <h2 className="text-3xl font-bold">{card.title}</h2>
-          <h3 className="text-xl font-medium" style={{ color: `${card.colors?.text || "#ffffff"}99` }}>
+        <div className='px-4 py-2'>
+          <h2 className='text-3xl font-bold'>{card.title}</h2>
+          <h3
+            className='text-xl font-medium'
+            style={{ color: `${card.colors?.text || '#ffffff'}99` }}
+          >
             {card.subtitle}
           </h3>
         </div>
 
         {/* Card Image */}
-        <div className="mt-2 overflow-hidden px-4">
+        <div className='mt-2 overflow-hidden px-4'>
           <div
-            className="aspect-video w-full overflow-hidden rounded-xl bg-cover bg-center"
+            className='aspect-video w-full overflow-hidden rounded-xl bg-cover bg-center'
             style={{
-              boxShadow: `0 10px 30px ${card.colors?.shadow || "rgba(0, 0, 0, 0.3)"}`,
+              boxShadow: `0 10px 30px ${card.colors?.shadow || 'rgba(0, 0, 0, 0.3)'}`,
             }}
           />
-          <Image
+          <NextImage
             src={card.imageUrl}
             alt={card.imageAlt}
             width={800}
             height={400}
-            className="object-cover rounded-xl"
+            className='object-cover rounded-xl'
           />
         </div>
 
         {/* Card Footer */}
-        <div className="mt-auto p-4">
+        <div className='mt-auto p-4'>
           <div
-            className="rounded-full px-3 py-1 text-sm"
+            className='rounded-full px-3 py-1 text-sm'
             style={{
-              backgroundColor: `${card.colors?.text || "#ffffff"}20`,
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.25rem",
+              backgroundColor: `${card.colors?.text || '#ffffff'}20`,
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.25rem',
             }}
           >
-            <DollarSign className="h-4 w-4" />
+            <DollarSign className='h-4 w-4' />
             {card.subtitle}
           </div>
-          <p className="mt-3 text-sm opacity-80">{card.description}</p>
+          <p className='mt-3 text-sm opacity-80'>{card.description}</p>
         </div>
 
         {/* Drag indicator for the top card */}
         {index === 0 && (
-          <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 flex-col items-center">
+          <div className='absolute bottom-2 left-1/2 flex -translate-x-1/2 flex-col items-center'>
             <motion.div
-              className="h-1 w-10 rounded-full"
-              style={{ backgroundColor: `${card.colors?.text || "#ffffff"}40` }}
+              className='h-1 w-10 rounded-full'
+              style={{ backgroundColor: `${card.colors?.text || '#ffffff'}40` }}
               animate={{ y: [0, 5, 0] }}
               transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
             />
@@ -340,5 +345,5 @@ function Card({ card, index, removeCard, getIconComponent, totalCards }: CardPro
         )}
       </motion.div>
     </motion.div>
-  )
+  );
 }

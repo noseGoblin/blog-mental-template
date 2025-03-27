@@ -1,5 +1,5 @@
 # 2025.03.##
-* Add Image component to CardStack
+* Add Image component to CardStack and refactor to clear build type errors
 * Rename CardStack filename to CardStack.tsx
 * Add image alt fallback to HoverCardTrigger on home page
 
