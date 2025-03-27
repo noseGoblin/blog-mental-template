@@ -7,33 +7,34 @@ import NextImage from 'next/image';
 
 // @ts-ignore
 import ColorThief from "colorthief"
+import { urlFor } from '@/app/lib/sanity';
 
 interface SanityImage {
-  _type: string
+  _type: string;
   asset: {
-    _ref: string
-    _type: string
-  }
+    _ref: string;
+    _type: string;
+  };
 }
 
 interface CardData {
-  _id: string
-  title: string
-  subtitle: string
-  description: string
-  imageUrl: string
-  imageAlt: string
-  icon: string
+  _id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  imageUrl: string;
+  imageAlt: string;
+  icon: string;
   colors?: {
-    primary: string
-    secondary: string
-    text: string
-    shadow: string
-  }
+    primary: string;
+    secondary: string;
+    text: string;
+    shadow: string;
+  };
 }
 
 interface CardStackProps {
-  initialCards: CardData[]
+  initialCards: CardData[];
 }
 
 // Fallback data in case Sanity fetch fails
@@ -216,10 +217,16 @@ interface CardProps {
   totalCards: number;
 }
 
-function Card({ card, index, removeCard, getIconComponent, totalCards }: CardProps) {
-  const zIndex = totalCards - index
-  const yOffset = index * 30 // Increased vertical offset
-  const xOffset = index * 5 // Added horizontal offset
+function Card({
+  card,
+  index,
+  removeCard,
+  getIconComponent,
+  totalCards,
+}: CardProps) {
+  const zIndex = totalCards - index;
+  const yOffset = index * 30; // Increased vertical offset
+  const xOffset = index * 5; // Added horizontal offset
 
   return (
     <motion.div
@@ -306,8 +313,13 @@ function Card({ card, index, removeCard, getIconComponent, totalCards }: CardPro
               boxShadow: `0 10px 30px ${card.colors?.shadow || 'rgba(0, 0, 0, 0.3)'}`,
             }}
           />
+
           <NextImage
-            src={card.imageUrl}
+            src={
+              card.imageUrl
+                ? urlFor(card.imageUrl).width(800).height(400).url()
+                : ''
+            }
             alt={card.imageAlt}
             width={800}
             height={400}
