@@ -1,3 +1,6 @@
+# 2025.03.27.01
+* Update CardStack component to use urlFor function
+
 # 2025.03.27
 * Add Image component to CardStack and refactor to clear build type errors
 * Rename CardStack filename to CardStack.tsx
