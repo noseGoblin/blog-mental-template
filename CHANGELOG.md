@@ -1,28 +1,42 @@
 # 2025.06.##
 * ## UPDATE:
-  * @sanity/ui v2.15.18
+  * @radix-ui/react-alert-dialog v1.1.6
+  * @radix-ui/react-avatar v1.1.3
+  * @radix-ui/react-dropdown-menu v2.1.6
+  * @radix-ui/react-hover-card v1.1.6
+  * @radix-ui/react-label v2.1.2
+  * @radix-ui/react-slot v1.1.2
   * @radix-ui/react-tooltip v1.2.7
+  * @sanity/ui v2.15.18
+  * @tabler/icons-react v3.31.0
+  * @tailwindcss/postcss v4.1.8
+  * @types/node v22.15.29
+  * @types/react v19.0.12
+  * @types/react-dom v19.0.4
+  * embla-carousel-react v8.6.0
   * eslint v9.28.0
   * eslint-config-next v15.3.3
-  * postcss v8.5.4
-  * tailwindcss v4.1.8
-  * typescript v5.8.3
-  * @types/node v22.15.29
-  * sanity v3.90.0
-  * sass v1.89.1
-  * tailwind-merge v3.3.0
-  * zod v3.25.48
-  * react-hook-form v7.57.0
-  * react v19.1.0
-  * react-dom v19.1.0
-  * embla-carousel-react v8.6.0
   * framer-motion v12.15.0
   * next v15.3.3
   * next-sanity v9.12.0
-  * @radix-ui/react-tooltip v1.2.7
-  * @sanity/ui v2.15.18
-  * @tailwindcss/postcss v4.1.8
+  * postcss v8.5.4
+  * react-hook-form v7.57.0
+  * react v19.1.0
+  * react-dom v19.1.0
+  * sanity v3.90.0
+  * sass v1.89.1
+  * tailwindcss v4.1.8
+  * tailwind-merge v3.3.0
+  * typescript v5.8.3
+  * zod v3.25.48
+* ## UPDATE /sanity:
+  * @sanity/ui v2.15.8
+  * @sanity/vision v3.80.1
+  * react v19.0.0
+  * react-dom v19.0.0"
+  * sanity v3.80.1
   * @types/react v19.0.12
+  * typescript v5.8.2
 
 # 2025.03.27.01
 * Update CardStack component to use urlFor function
