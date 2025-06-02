@@ -1,3 +1,29 @@
+# 2025.06.##
+* ## UPDATE:
+  * @sanity/ui v2.15.18
+  * @radix-ui/react-tooltip v1.2.7
+  * eslint v9.28.0
+  * eslint-config-next v15.3.3
+  * postcss v8.5.4
+  * tailwindcss v4.1.8
+  * typescript v5.8.3
+  * @types/node v22.15.29
+  * sanity v3.90.0
+  * sass v1.89.1
+  * tailwind-merge v3.3.0
+  * zod v3.25.48
+  * react-hook-form v7.57.0
+  * react v19.1.0
+  * react-dom v19.1.0
+  * embla-carousel-react v8.6.0
+  * framer-motion v12.15.0
+  * next v15.3.3
+  * next-sanity v9.12.0
+  * @radix-ui/react-tooltip v1.2.7
+  * @sanity/ui v2.15.18
+  * @tailwindcss/postcss v4.1.8
+  * @types/react v19.0.12
+
 # 2025.03.27.01
 * Update CardStack component to use urlFor function
 
