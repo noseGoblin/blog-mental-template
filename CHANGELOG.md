@@ -1,3 +1,13 @@
+# 2025.06.03
+* ## UPDATE /sanity:
+  * @sanity/vision v3.91.0
+  * sanity v3.91.0
+* ## UPDATE:
+  * framer-motion v12.16.0
+  * sanity v3.91.0
+  * zod v3.25.49
+* Activate Presentation Tool and config
+
 # 2025.06.02
 * ## UPDATE:
   * @radix-ui/react-alert-dialog v1.1.6
