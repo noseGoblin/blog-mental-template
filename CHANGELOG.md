@@ -7,6 +7,7 @@
   * sanity v3.91.0
   * zod v3.25.49
 * Activate Presentation Tool and config
+* Add / update branding media asses
 
 # 2025.06.02
 * ## UPDATE:
