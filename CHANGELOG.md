@@ -6,8 +6,9 @@
   * framer-motion v12.16.0
   * sanity v3.91.0
   * zod v3.25.49
+* Add / update branding media assets
 * Activate Presentation Tool and config
-* Add / update branding media asses
+  * Run guide: [Presentation Tool](https://www.sanity.io/docs/next-js-quickstart/diplaying-content-in-next-js)
 
 # 2025.06.02
 * ## UPDATE:
