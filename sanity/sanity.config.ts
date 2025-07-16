@@ -16,7 +16,7 @@ export default defineConfig({
     presentationTool({
       previewUrl: {
         origin: 'https://blog.alliantgroup.com',
-        previewMode: {enable: '/preview/enable', disable: '/preview/disable'},
+        previewMode: {enable: '/api/draft-mode/enable', disable: '/api/draft-mode/disable'},
       },
     }),
     visionTool(),
