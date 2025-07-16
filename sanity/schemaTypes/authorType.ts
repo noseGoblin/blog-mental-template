@@ -49,7 +49,7 @@ export const authorType = defineType({
       type: 'number',
       title: 'Priority',
       description:
-        'Set the priority of the author. Lower number means higher priority on https://blog.alliantgroup.com/expert listing page. Example: Dhaval Jadav has priority 0.',
+        'Set the priority of the author. Lower number means higher priority on https://blog-mental-template.com/expert listing page. Example: Dhaval Jadav has priority 0.',
     }),
     defineField({
       name: 'categories',
@@ -58,27 +58,27 @@ export const authorType = defineType({
     }),
     defineField({
       name: 'linkedin',
-      description: 'Add LinkedIn link in this format: https://www.linkedin.com/in/dhavaljadav02/',
+      description: 'Add LinkedIn link in this format: https://www.linkedin.com/in/your-profile/',
       type: 'url',
     }),
     defineField({
       name: 'twitter',
-      description: 'Add Twitter link in this format: https://twitter.com/dhavaljadav02/',
+      description: 'Add Twitter link in this format: https://twitter.com/your-profile/',
       type: 'url',
     }),
     defineField({
       name: 'facebook',
-      description: 'Add Facebook link in this format: https://www.facebook.com/dhavaljadav02/',
+      description: 'Add Facebook link in this format: https://www.facebook.com/your-profile/',
       type: 'url',
     }),
     defineField({
       name: 'instagram',
-      description: 'Add Instagram link in this format: https://www.instagram.com/dhaval_jadav__/',
+      description: 'Add Instagram link in this format: https://www.instagram.com/your-profile/',
       type: 'url',
     }),
     defineField({
       name: 'website',
-      description: 'Add website URL in this format: https://www.alliantgroup.com/',
+      description: 'Add website URL in this format: https://www.example.com/',
       type: 'url',
     }),
     defineField({
@@ -91,7 +91,7 @@ export const authorType = defineType({
     }),
     defineField({
       name: 'location',
-      description: 'Add Google Maps link in this format: https://goo.gl/maps/ZYsPcRS77dagkRYA8',
+      description: 'Add Google Maps link in this format: https://goo.gl/maps/your-code',
       type: 'url',
     }),
     defineField({

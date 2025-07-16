@@ -8,8 +8,9 @@ import Navbar from '@/components/Navbar';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'alliantgroup - News',
-  description: 'Official sponsors of American innovation and job creation',
+  title: 'Mental Health - News',
+  description:
+    'Take care of your mental health with the latest news and insights.',
 };
 
 export default function RootLayout({

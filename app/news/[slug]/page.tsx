@@ -97,7 +97,7 @@ export default async function NewsArticle(props: {
     <div>
       <h1>
         <span className='block text-base text-center text-primary font-semibold tracking-wide uppercase dark:text-socials'>
-          alliantgroup - News
+          Mental Health - News
         </span>
         <span className='block text-3xl text-left font-bold tracking-tight leading-8 sm:text-4xl mt-8'>
           {data.title}
