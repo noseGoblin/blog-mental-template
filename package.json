@@ -1,6 +1,6 @@
 {
-  "name": "blog.alliantgroup.com",
-  "version": "2025.06.02",
+  "name": "blog-mental-template",
+  "version": "2025.07.16",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -27,7 +27,7 @@
     "clsx": "^2.1.1",
     "colorthief": "^2.6.0",
     "embla-carousel-react": "^8.6.0",
-    "framer-motion": "^12.15.0",
+    "framer-motion": "^12.16.0",
     "lucide-react": "^0.483.0",
     "next": "^15.3.3",
     "next-sanity": "^9.12.0",
@@ -38,11 +38,11 @@
     "react-hook-form": "^7.57.0",
     "react-icons": "^5.5.0",
     "react-player": "^2.16.0",
-    "sanity": "^3.90.0",
+    "sanity": "^3.91.0",
     "sass": "^1.89.1",
     "tailwind-merge": "^3.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.25.48"
+    "zod": "^3.25.49"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",

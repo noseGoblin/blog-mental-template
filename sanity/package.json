@@ -1,5 +1,5 @@
 {
-  "name": "blogalliantgroup",
+  "name": "blog-mental-template",
   "private": true,
   "version": "1.0.0",
   "main": "package.json",
@@ -16,12 +16,12 @@
   ],
   "dependencies": {
     "@sanity/ui": "^2.15.18",
-    "@sanity/vision": "^3.90.0",
+    "@sanity/vision": "^3.91.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-is": "^19.1.0",
     "react-player": "^2.16.0",
-    "sanity": "^3.90.0",
+    "sanity": "^3.91.0",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {

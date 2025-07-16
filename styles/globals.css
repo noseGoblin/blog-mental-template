@@ -111,7 +111,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
-/* styles from events.alliantgroup.com END */
+/* styles from old .com END */
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -212,7 +212,7 @@
   --sidebar-ring: oklch(0.446 0.043 257.281);
 }
 
-/* styles from events.alliantgroup.com START */
+/* styles from old .com START */
 h1,
 h2,
 h3,
