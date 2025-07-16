@@ -6,7 +6,7 @@ import {presentationTool} from 'sanity/presentation'
 
 export default defineConfig({
   name: 'default',
-  title: 'blog.alliantgroup',
+  title: 'blog-mental-template',
 
   projectId: 'v700z5ue',
   dataset: 'production',
@@ -15,7 +15,7 @@ export default defineConfig({
     structureTool(),
     presentationTool({
       previewUrl: {
-        origin: 'https://blog.alliantgroup.com',
+        origin: 'https://blog-mental-template.vercel.app',
         previewMode: {enable: '/api/draft-mode/enable', disable: '/api/draft-mode/disable'},
       },
     }),

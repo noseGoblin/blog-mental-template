@@ -83,7 +83,7 @@ export default async function ExpertAuthor(props: {
     <div>
       <h1>
         <span className='block text-base text-center text-primary dark:text-socials font-semibold tracking-wide uppercase'>
-          alliantgroup - Experts
+          Mental Health - Experts
         </span>
         <span className='block text-4xl text-center md:text-left font-bold tracking-tight leading-8 sm:text-5xl mt-8'>
           {data.name}

@@ -1,3 +1,15 @@
+# 2025.07.16
+* Update readme with latest changes
+* Remove anything proprietary or branded
+* Update domains, config, and project information
+* ### UPDATE deps:
+  * @next/third-parties 15.4.1
+  * @sanity/client 7.8.0
+  * @types/node 22.16.4
+  * react-player 2.16.1
+  * sanity 4.0.1
+  * zod 3.25.76
+
 # 2025.06.03
 * ## UPDATE /sanity:
   * @sanity/vision v3.91.0
@@ -189,19 +201,19 @@
 
 # 2024.05.22.03
 * Add `leadership` field to blogType schema
-* Update [news page](https://blog.alliantgroup.com/news/erc-voluntary-disclosure-program)
+* Update [news page](https://blog-mental-template.com/news/erc-voluntary-disclosure-program)
   * Left align title
   * Add `leadership` section to blog post page
   * Update `fullArticle` interface
 
 # 2024.05.22.02
 * Update ISR to 10 minutes
-  * [home](https://blog.alliantgroup.com/)
-  * [expert page](https://blog.alliantgroup.com/expert/mark-w-everson)
-  * [news page](https://blog.alliantgroup.com/news/alliantgroup-and-ceo-dhaval-jadav-host-think-tank-focused-on-ai-for-small-and-medium-sized-cpa-firms-and-businesses)
+  * home
+  * expert page
+  * news page
 
 # 2024.05.22.01
-* Add [Vercel Web Analytics](https://vercel.com/alliantgroup/blog-alliantgroup/analytics?environment=all)
+* Add Vercel Web Analytics
   * Install package via: `npm i @vercel/analytics`
   * Add **Analytics** component to root layout
 
@@ -215,7 +227,7 @@
     * Add conditional to Button that opens external links in a new tab
   * Add customButton to /expert dynamic route
   * Update bioPage interface with new fields: color, link, text
-  * Use test page: [Mark W. Everson](https://blog.alliantgroup.com/expert/mark-w-everson)
+  * Use test page: [Mark W. Everson](https://blog-mental-template.com/expert/mark-w-everson)
 * Update **Button** component
   * Accept `color` prop
     * Values: `blue`, `green`, `orange`
@@ -283,7 +295,7 @@
 
 # 2024.04.08
 * Add environment variables
-  * Vercel deployed domain: [blog.alliantgroup.com](https://blog.alliantgroup.com/)
+  * Vercel deployed domain: [blog-mental-template.com](https://blog-mental-template.com/)
   * Sanity Project ID
 * Add date formating to blogType
 * Add author and publish date to blog post page
@@ -335,7 +347,7 @@
 # 2024.03.20.01
 * Move styles to `/styles` directory
 * Install sass: `npm install sass`
-* Add styles from [events.alliantgroup.com](https://events.alliantgroup.com/) template
+* Add styles from old template
 * Add **Navbar** component
 * Remove default Next.js homepage
 
