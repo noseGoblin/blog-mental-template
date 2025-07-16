@@ -1,5 +1,5 @@
 # blog-mental-template
-### Version `2025.06.02`
+### Version `2025.07.16`
 
 This is a [Next.js](https://nextjs.org/) project running [Sanity.io](https://www.sanity.io/) (clean full customized content studio) utilizing [GROQ](https://www.sanity.io/docs/groq) query language. GROQ Cheat Sheet can be found [here](https://www.sanity.io/docs/query-cheat-sheet), and a GROQ playground is [here](https://groq.dev/). [Shadcdn/ui](https://ui.shadcn.com/) is used for some UI components, and the (Blue) theme is toggled with next-themes.
 
