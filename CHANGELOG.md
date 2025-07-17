@@ -2,6 +2,12 @@
 * Add MentalHealthHubLogo component
   * Add MentalHealthHubLogo to Navbar
   * Remove LogoSwitcher component
+* Replace package manager `npm` with `pnpm`
+  * Update package manager in README.md
+  * Create `pnpm-lock.yaml` file via: `pnpm import`
+  * Update pnpm 10.13.1 via: `pnpm self-update`
+  * Re-install dependencies via: `pnpm install`
+  * Prevent npm accidental usage by adding `preinstall` script to `package.json`
 * ### UPDATE deps:
   * 
   * 
