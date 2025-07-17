@@ -1,6 +1,6 @@
 {
   "name": "blog-mental-template",
-  "version": "2025.07.16",
+  "version": "2025.07.17",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
