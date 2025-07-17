@@ -9,21 +9,26 @@
   * Re-install dependencies via: `pnpm install`
   * Prevent npm accidental usage by adding `preinstall` script to `package.json`
 * ### UPDATE deps:
-  * 
-  * 
-  * 
-  * 
-  * 
-  * 
-  * 
-  * 
-  * 
-  * 
-  * 
-  * 
-  * 
-  * 
-  * 
+  * @sanity/ui 2.16.7
+  * @tailwindcss/postcss 4.1.11
+  * @vercel/analytics 1.5.0
+  * framer-motion 12.23.6
+  * next 15.4.1
+  * next-sanity 9.12.3
+  * npm-check-updates 17.1.18
+  * react-hook-form 7.60.0
+  * react-player 2.16.2
+  * sanity 3.99.0
+  * sass 1.89.2
+  * tailwind-merge 3.3.1
+  * zod 3.25.76
+  * @types/node 22.16.4
+  * @types/react 19.1.8
+  * @types/react-dom 19.1.6
+  * eslint 9.31.0
+  * eslint-config-next 15.4.1
+  * postcss 8.5.6
+  * tailwindcss 4.1.11
 
 # 2025.07.16
 * Update readme with latest changes
