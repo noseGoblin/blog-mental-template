@@ -31,6 +31,11 @@
   * tailwindcss 4.1.11
 * ### UPDATE /sanity:
   * @sanity/cli 4.0.1
+  * @sanity/ui 2.16.7
+  * @types/react 19.1.8
+  * eslint 9.31.0
+  * prettier 3.6.2
+  * styled-components 6.1.19
 
 # 2025.07.16
 * Update readme with latest changes
