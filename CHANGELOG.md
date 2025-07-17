@@ -29,6 +29,8 @@
   * eslint-config-next 15.4.1
   * postcss 8.5.6
   * tailwindcss 4.1.11
+* ### UPDATE /sanity:
+  * @sanity/cli 4.0.1
 
 # 2025.07.16
 * Update readme with latest changes
