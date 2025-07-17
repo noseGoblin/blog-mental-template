@@ -1,3 +1,8 @@
+# 2025.07.17
+* Add MentalHealthHubLogo component
+  * Add MentalHealthHubLogo to Navbar
+  * Remove LogoSwitcher component
+
 # 2025.07.16
 * Update readme with latest changes
 * Remove anything proprietary or branded
